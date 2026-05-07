@@ -1,0 +1,40 @@
+ .preview-btn {
+ display: inline-block;
+ border-radius: 7px;
+ border: none;
+ color: white;
+ font-family: inherit;
+ text-align: center;
+ font-size: 15px;
+ transition: all 0.4s;
+ cursor: pointer;
+ font-weight: bold;
+ border: 1px solid gray;
+}
+
+.preview-btn span {
+ cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  position: relative;
+  transition: 0.4s;
+}
+
+.preview-btn span:after {
+ content: 'clickit!';
+ position: absolute;
+ opacity: 0;
+ top: 0;
+ right: -20px;
+ transition: 0.7s;
+}
+
+.preview-btn:hover span {
+ padding-right: 3.55em;
+}
+
+.preview-btn:hover span:after {
+ opacity: 1;
+ right: 0;
+}
