@@ -26,8 +26,8 @@ const HeroSection = () => {
     ];
 
     return (
-        <div className='sticky top-0'>
-            <div className='flex flex-col md:flex-row w-full px-5 md:px-17 items-center gap-10 md:gap-20 mt-10 justify-between'>
+        <div>
+            <div className='flex flex-col md:flex-row w-full px-5 md:px-17 items-center gap-10 md:gap-20 md:mt-10 mt-2 justify-between'>
                 <div className='mt-20'>
 
                     <SplitText
@@ -46,7 +46,8 @@ const HeroSection = () => {
 
                     <p className='text-[16px] md:text-[20px] font-semibold text-gray-500 mt-7 w-full md:w-[35vw]'>I build websites with dedication and attention to detail. Available for work.</p>
                 </div>
-                <div className='mx-0 md:mx-10 w-full md:w-auto'>
+                <div className='relative mx-0 md:mx-10 w-full md:w-auto'>
+                    
                     <h1 className='font-semibold text-[20px] md:text-[25px] text-black'>Projects i've built</h1>
                     <div className='flex gap-10 items-center mt-7'>
 
@@ -116,6 +117,7 @@ const HeroSection = () => {
                 </div>
             </div>
         </div>
+
 
     )
 }
