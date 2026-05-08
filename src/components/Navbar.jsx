@@ -4,7 +4,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className='w-full h-16 flex justify-between items-center px-5 md:px-17 relative'>
+    <nav className='w-full h-25 flex justify-between items-center px-5 md:px-17 relative bg-gray-100'>
 
       <div>
         <p className='font-semibold text-[20px] cursor-pointer'>

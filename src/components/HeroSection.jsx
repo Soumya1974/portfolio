@@ -26,8 +26,8 @@ const HeroSection = () => {
     ];
 
     return (
-        <div>
-            <div className='flex flex-col md:flex-row w-full px-5 md:px-17 items-center gap-10 md:gap-20 md:mt-10 mt-2 justify-between'>
+        <div className='sticky top-0 bg-gray-100'>
+            <div className='flex flex-col md:flex-row w-full px-5 md:px-17 items-center gap-10 md:gap-20 justify-between'>
                 <div className='mt-20'>
 
                     <SplitText
@@ -46,7 +46,7 @@ const HeroSection = () => {
 
                     <p className='text-[16px] md:text-[20px] font-semibold text-gray-500 mt-7 w-full md:w-[35vw]'>I build websites with dedication and attention to detail. Available for work.</p>
                 </div>
-                <div className='relative mx-0 md:mx-10 w-full md:w-auto'>
+                <div className='relative mx-0 md:mx-10 w-full md:w-auto sm:mt-15 lg:mt-30'>
                     
                     <h1 className='font-semibold text-[20px] md:text-[25px] text-black'>Projects i've built</h1>
                     <div className='flex gap-10 items-center mt-7'>
@@ -90,7 +90,7 @@ const HeroSection = () => {
                 </div>
             </div >
             <div className="overflow-hidden mt-10 md:mt-19 w-full bg-gray-200 font-semibold text-black">
-                <div className="flex w-max animate-scroll items-center h-[10vw] md:h-[5vw] gap-10 text-sm md:text-base">
+                <div className="animate-scroll flex w-max items-center h-[10vw] md:h-[5vw] gap-10 text-sm md:text-base">
                     <span>3D artist</span>
                     <span>Blender Animator</span>
                     <span>1yr+ Experience</span>
