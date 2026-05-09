@@ -126,7 +126,7 @@ const ProjectCard = () => {
                 return (
                     <div
                         key={id}
-                        className={` w-full md:w-screen  lg:w-[90vw] h-auto min-h-105 sm:min-h-125 md:min-h-0 mb-6 sm:mb-10 md:mb-0 sticky top-4 sm:top-6 md:top-0 px-3 sm:px-4 py-3 sm:py-5 md:py-10 bg-transparent`}
+                        className={` w-full md:w-screen  lg:w-[90vw] h-auto min-h-105 sm:min-h-125 md:min-h-0 mb-6 sm:mb-10 md:mb-0 sticky top-4 sm:top-6 md:top-0 px-0 sm:px-4 py-3 sm:py-5 md:py-10 bg-transparent`}
                     >
 
                         <div

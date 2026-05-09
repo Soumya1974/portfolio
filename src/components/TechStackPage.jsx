@@ -1,13 +1,50 @@
-import { div } from 'motion/react-client';
 import React, { useState } from 'react'
-import { FaNodeJs } from 'react-icons/fa';
-import { SiExpress, SiMongodb } from 'react-icons/si';
+import { motion, AnimatePresence } from 'framer-motion'
 import python from '../assets/python.svg'
 import c from '../assets/c.svg'
 import java from '../assets/java.svg'
 import js from '../assets/js.svg'
 import html from '../assets/html.svg'
 import css from '../assets/css.svg'
+import tailwind from '../assets/tailwind.svg'
+import express from '../assets/express.svg'
+import react from '../assets/react.svg'
+import redux from '../assets/redux.svg'
+import blender from '../assets/blender.svg'
+import davinchi from '../assets/davinchi.svg'
+import ofiice from '../assets/ofiice.svg'
+import nodejs from '../assets/nodejs.svg'
+import youtube from '../assets/youtube.svg'
+import {
+    ClipboardList,
+    Frame,
+    GalleryHorizontalEnd,
+    Languages,
+    LibraryBig
+} from 'lucide-react';
+
+const containerVariants = {
+    hidden: {},
+    visible: { transition: { staggerChildren: 0.07 } },
+}
+
+const itemVariants = {
+    hidden: { opacity: 0, y: 14, scale: 0.95 },
+    visible: {
+        opacity: 1, y: 0, scale: 1,
+        transition: { type: 'spring', stiffness: 260, damping: 20 }
+    },
+    exit: { opacity: 0, y: -10, scale: 0.95, transition: { duration: 0.12 } },
+}
+
+const panelVariants = {
+    hidden: { opacity: 0, x: 20 },
+    visible: {
+        opacity: 1, x: 0,
+        transition: { type: 'spring', stiffness: 220, damping: 22 }
+    },
+    exit: { opacity: 0, x: -20, transition: { duration: 0.15 } },
+}
 
 const TechStackPage = () => {
 
@@ -18,180 +55,253 @@ const TechStackPage = () => {
             id: 1,
             title: 'All',
             languages: [
-                {
-                    logo: <FaNodeJs />,
-                    name: 'Node Js'
-                },
-                {
-                    logo: <SiExpress />,
-                    name: 'Express Js'
-                },
-                {
-                    logo: <SiMongodb />,
-                    name: 'MongoDb'
-                }
-            ]
+                { logo: js, name: 'Java Script' },
+                { logo: nodejs, name: 'Node Js' },
+                { logo: python, name: 'Python' },
+                { logo: c, name: 'C' },
+                { logo: java, name: 'Java' },
+                { logo: html, name: 'Html5' },
+                { logo: css, name: 'Css' },
+                { logo: tailwind, name: 'Tailwind' },
+                { logo: express, name: 'Express Js' },
+                { logo: react, name: 'React' },
+                { logo: redux, name: 'Redux' },
+                { logo: blender, name: 'Blender' },
+                { logo: davinchi, name: 'Davinchi' },
+                { logo: ofiice, name: 'Ms Office' },
+                { logo: youtube, name: 'YouTube' },
+            ],
+            concepts: ['3D Animation', 'Video Editing', 'Data Structures', 'Routing', 'Req & Res', 'Middlewares'],
+            langlogo: <GalleryHorizontalEnd className='lg:w-7 lg:h-7 md:w-5 md:h-5 w-4 h-4' />,
         },
         {
             id: 2,
             title: 'Languages',
             languages: [
-                {
-                    logo: js,
-                    name: 'Java Script'
-                },
-                {
-                    logo: python,
-                    name: 'Python'
-                },
-                {
-                    logo: c,
-                    name: 'C'
-                },
-                {
-                    logo: java,
-                    name: 'Java'
-                },
-                {
-                    logo: html,
-                    name: 'Html5'
-                },
-                {
-                    logo: css,
-                    name: 'Css'
-                }
-            ]
+                { logo: js, name: 'Java Script' },
+                { logo: python, name: 'Python' },
+                { logo: c, name: 'C' },
+                { logo: java, name: 'Java' },
+                { logo: html, name: 'Html5' },
+                { logo: css, name: 'Css' },
+            ],
+            concepts: ['Array', 'Data Structures', 'Oops', 'CB & Promices'],
+            langlogo: <Languages className='lg:w-7 lg:h-7 md:w-5 md:h-5 w-4 h-4' />,
         },
         {
             id: 3,
             title: 'Frameworks',
             languages: [
-                {
-                    logo: <FaNodeJs />,
-                    name: 'Node Js'
-                },
-                {
-                    logo: <SiExpress />,
-                    name: 'Express Js'
-                },
-                {
-                    logo: <SiMongodb />,
-                    name: 'MongoDb'
-                }
-            ]
+                { logo: tailwind, name: 'Tailwind' },
+                { logo: express, name: 'Express Js' },
+            ],
+            concepts: ['Routing', 'Req & Res', 'Middlewares', 'Grid & Flex'],
+            langlogo: <Frame className='lg:w-7 lg:h-7 md:w-5 md:h-5 w-4 h-4' />,
         },
         {
             id: 4,
             title: 'Libraries',
             languages: [
-                {
-                    logo: <FaNodeJs />,
-                    name: 'Node Js'
-                },
-                {
-                    logo: <SiExpress />,
-                    name: 'Express Js'
-                },
-                {
-                    logo: <SiMongodb />,
-                    name: 'MongoDb'
-                }
-            ]
+                { logo: react, name: 'React' },
+                { logo: redux, name: 'Redux' },
+            ],
+            concepts: ['States', 'Routing', 'Redux', 'Hooks'],
+            langlogo: <LibraryBig className='lg:w-7 lg:h-7 md:w-5 md:h-5 w-4 h-4' />,
         },
         {
             id: 6,
             title: 'Others',
             languages: [
-                {
-                    logo: <FaNodeJs />,
-                    name: 'Node Js'
-                },
-                {
-                    logo: <SiExpress />,
-                    name: 'Express Js'
-                },
-                {
-                    logo: <SiMongodb />,
-                    name: 'MongoDb'
-                }
-            ]
-        }
+                { logo: blender, name: 'Blender' },
+                { logo: davinchi, name: 'Davinchi' },
+                { logo: ofiice, name: 'Ms Office' },
+                { logo: youtube, name: 'YouTube' },
+            ],
+            concepts: ['3D Animation', 'Video Editing', 'Excel', 'Youtube'],
+            langlogo: <ClipboardList className='lg:w-7 lg:h-7 md:w-5 md:h-5 w-4 h-4' />,
+        },
     ];
 
+    const active = fieldOptions.find(f => f.id === stackId);
+
     return (
-        <section className="min-h-screen w-full flex items-center bg-yellow-500 px-6 py-10 absolute rounded-t-lg mt-10">
-            <div className="w-full h-[40vw] px-10 py-10">
-                <div className='flex gap-2 items-center'>
-                    <h1 className='text-5xl font-bold bg-slate-800 text-yellow-500'>Tech Stack</h1>
-                    <span className='text-3xl font-semibold'>i use</span>
+        <section className="min-h-screen absolute w-full bg-yellow-500 px-1 sm:px-6 lg:px-10 sm:py-10 rounded-t-md mt-10 flex items-center py-2">
 
-                </div>
-                <div className='w-full h-[30vw] flex gap-5 mt-2'>
-                    <div className='w-1/2 h-full flex gap-5 flex-col'>
-                        <div className='h-3/4 w-full bg-gray-700 rounded-md px-5 py-5'>
+            <div className="w-full max-w-7xl mx-auto">
 
-                            <div className='h-1/3 grid grid-cols-4 gap-1'>
-                                {
-                                    fieldOptions.map(items => {
+                <motion.div
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, ease: 'easeOut' }}
+                    className='flex flex-wrap gap-2 items-center sm:mt-0 -mt-50'
+                >
+                    <h1 className='text-3xl sm:text-4xl md:text-5xl font-bold bg-slate-800 text-yellow-500 px-2'>
+                        Tech Stack
+                    </h1>
+                    <span className='text-lg sm:text-2xl md:text-3xl font-semibold'>
+                        i use
+                    </span>
+                </motion.div>
 
-                                        const { title, id } = items;
+                <div className='w-full flex flex-col lg:flex-row gap-5 sm:mt-5 mt-1'>
 
-                                        return (
-                                            <button
-                                                key={id}
-                                                className="preview-btn bg-transparent text-white hover:shadow-[0_0_20px_rgba(255,255,255,0.1)]"
-                                                onClick={() => setStackId(id)}
-                                            >
-                                                <span className="flex items-center text-white justify-center gap-2">
-                                                    {title}
-                                                </span>
-                                            </button>
-                                        )
-                                    })
-                                }
+                    <div className='w-full lg:w-1/2 flex flex-col gap-5 sm:h-120 h-0'>
 
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.1, duration: 0.45 }}
+                            className='w-full bg-gray-700 rounded-md p-4 h-45 sm:h-45 lg:h-90 shrink-0 hidden sm:block'
+                        >
+                            <div className='grid grid-cols-2 sm:grid-cols-3 gap-3 content-start'>
+                                {fieldOptions.map(({ title, id, langlogo }) => (
+                                    <motion.button
+                                        key={id}
+                                        whileHover={{ scale: 1.04 }}
+                                        whileTap={{ scale: 0.96 }}
+                                        onClick={() => setStackId(id)}
+                                        className={`
+                                            relative py-2 px-3 rounded-md text-sm font-semibold h-10
+                                            flex items-center justify-around cursor-pointer gap-1
+                                            transition-colors duration-400 overflow-hidden
+                                            ${stackId === id
+                                                ? 'bg-yellow-500 text-slate-900 shadow-[0_0_18px_rgba(234,179,8,0.5)]'
+                                                : 'bg-slate-800 text-white hover:shadow-[0_0_14px_rgba(255,255,255,0.08)]'
+                                            }
+                                        `}
+                                    >
+                                        <span>{langlogo}</span>
+                                        {title}
+                                    </motion.button>
+                                ))}
                             </div>
+                        </motion.div>
 
-                        </div>
-                        <div className='h-1/4 w-full bg-zinc-600 rounded-md'>
-
-                        </div>
-
-                    </div>
-                    <div className='w-1/2 h-full bg-slate-800 rounded-md px-5 py-5'>
-                        <h1 className='text-white font-semibold text-2xl'>Languages</h1>
-                        <div className='h-px w-full bg-gray-600 rounded-lg mt-5' />
-
-                        <div className='px-5 py-5 w-full text-white grid grid-cols-5'>
-
-                            {
-                                fieldOptions.map(items => {
-                                    const { languages, id } = items;
-
-                                    if (stackId === id) {
-                                        return languages.map((lang, index) => (
-                                            <div
+                        <div className='flex-1 overflow-hidden rounded-md hidden sm:block'>
+                            <div className='h-full grid grid-cols-2 sm:grid-cols-3 gap-3 px-2 py-2 content-start'>
+                                <AnimatePresence mode="wait">
+                                    <motion.div
+                                        key={stackId + '-concepts'}
+                                        className="contents"
+                                        variants={containerVariants}
+                                        initial="hidden"
+                                        animate="visible"
+                                        exit="exit"
+                                    >
+                                        {active?.concepts.map((tag, index) => (
+                                            <motion.div
                                                 key={index}
-                                                className='flex flex-col justify-center items-center px-2 py-1 mt-3'
+                                                variants={itemVariants}
+                                                className="relative px-4 h-10 bg-slate-800 rounded-md flex items-center justify-center shadow-lg"
                                             >
-                                                <div className='px-3 py-3 bg-gray-700 rounded-lg'>
-                                                   <img src={lang.logo}/>
-                                                </div>
-
-                                                <div className='text-white'>
-                                                    {lang.name}
-                                                </div>
-                                            </div>
-                                        ));
-                                    }
-                                })
-                            }
-
+                                                <span className="relative z-10 text-white font-semibold text-sm text-center">
+                                                    {tag}
+                                                </span>
+                                            </motion.div>
+                                        ))}
+                                    </motion.div>
+                                </AnimatePresence>
+                            </div>
                         </div>
 
                     </div>
+
+                    <div className='w-full lg:w-1/2 bg-slate-800 rounded-md p-5 h-120 flex flex-col'>
+
+                    {/*Hide title on mobile */}
+
+                        <div className='shrink-0 sm:block hidden'>
+                            <AnimatePresence mode="wait">
+                                <motion.div
+                                    key={stackId + '-header'}
+                                    variants={panelVariants}
+                                    initial="hidden"
+                                    animate="visible"
+                                    exit="exit"
+                                    className='flex gap-2 items-center'
+                                >
+                                    <span className='text-white'>{active?.langlogo}</span>
+                                    <h1 className='text-white font-semibold text-2xl'>{active?.title}</h1>
+                                </motion.div>
+                            </AnimatePresence>
+                        </div>
+
+                            <div className='grid grid-cols-3 sm:grid-cols-3 gap-3 content-start sm:hidden'>
+                                {fieldOptions.map(({ title, id }) => (
+                                    <motion.button
+                                        key={id}
+                                        whileHover={{ scale: 1.04 }}
+                                        whileTap={{ scale: 0.96 }}
+                                        onClick={() => setStackId(id)}
+                                        className={`
+                                            relative py-2 px-3 rounded-md text-sm font-semibold h-10
+                                            flex items-center justify-center gap-1
+                                            transition-colors duration-200 overflow-hidden
+                                            ${stackId === id
+                                                ? 'bg-yellow-500 text-slate-900 shadow-[0_0_18px_rgba(234,179,8,0.5)]'
+                                                : 'bg-slate-800 text-white hover:shadow-[0_0_14px_rgba(255,255,255,0.08)]'
+                                            }
+                                        `}
+                                    >
+                                        {stackId === id && (
+                                            <motion.span
+                                                layoutId="active-pill"
+                                                className="absolute inset-0 bg-yellow-500 -z-10 rounded-md"
+                                                transition={{ type: 'spring', stiffness: 350, damping: 28 }}
+                                            />
+                                        )}
+                                        {title}
+                                    </motion.button>
+                                ))}
+                            </div>
+                        <div className='h-px w-full bg-gray-600 rounded-lg mt-5 shrink-0' />
+
+                        <div className='py-5 flex-1 sm:overflow-hidden overflow-y-auto'>
+                            <AnimatePresence mode="wait">
+                                <motion.div
+                                    key={stackId + '-langs'}
+                                    variants={containerVariants}
+                                    initial="hidden"
+                                    animate="visible"
+                                    exit="exit"
+                                    className='grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5 content-start'
+                                >
+                                    {active?.languages.map((lang, index) => (
+                                        <motion.div
+                                            key={index}
+                                            variants={itemVariants}
+                                            whileHover={{ y: -4, transition: { type: 'spring', stiffness: 300 } }}
+                                            className='flex flex-col items-center px-2 py-2 cursor-default'
+                                        >
+                                            <motion.div
+                                                whileHover={{
+                                                    rotate: [0, -6, 6, 0],
+                                                    transition: { duration: 0.35 }
+                                                }}
+                                                className='p-3 bg-gray-700 rounded-lg w-16 h-16 flex items-center justify-center
+                                                           shadow-md hover:shadow-[0_0_18px_rgba(234,179,8,0.3)] transition-shadow duration-300'
+                                            >
+                                                <img
+                                                    src={lang.logo}
+                                                    alt={lang.name}
+                                                    className='w-10 h-10 object-contain'
+                                                />
+                                            </motion.div>
+                                            <div className='text-white text-xs sm:text-sm mt-2 text-center'>
+                                                {lang.name}
+                                            </div>
+                                        </motion.div>
+                                    ))}
+                                </motion.div>
+                            </AnimatePresence>
+                        </div>
+
+                    </div>
+
                 </div>
+
             </div>
+
         </section>
     )
 }
