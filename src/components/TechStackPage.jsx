@@ -177,8 +177,8 @@ const TechStackPage = () => {
                             </div>
                         </motion.div>
 
-                        <div className='flex-1 overflow-hidden rounded-md hidden sm:block'>
-                            <div className='h-full grid grid-cols-2 sm:grid-cols-3 gap-3 px-2 py-2 content-start'>
+                        <div className='flex-1 overflow-hidden rounded-md hidden sm:block bg-gray-800 px-2 py-2'>
+                            <div className='h-full grid grid-cols-2 sm:grid-cols-3 gap-0 px-2 py-2 content-start'>
                                 <AnimatePresence mode="wait">
                                     <motion.div
                                         key={stackId + '-concepts'}
