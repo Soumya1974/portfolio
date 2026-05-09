@@ -4,7 +4,11 @@ import animation from '../assets/animation.png'
 import netflix from '../assets/netflix.png'
 import './ProjectCard.css'
 import SplitText from './SplitText'
-import { Atom, ChartLine, ChartNetwork, CodeXml, Database, DatabaseBackup, FileBraces, Flame, FolderGit2, Scaling, SquareArrowOutUpRight, StickyNote, Timer, Zap } from 'lucide-react'
+import { ChartLine, Flame, FolderGit2, Scaling, SquareArrowOutUpRight, StickyNote, Timer } from 'lucide-react'
+import { FaCss3Alt, FaGithub, FaHtml5, FaNodeJs, FaReact } from 'react-icons/fa'
+import { RiTailwindCssFill } from 'react-icons/ri'
+import { IoLogoJavascript } from 'react-icons/io'
+import { SiExpress, SiMongodb, SiRedux } from 'react-icons/si'
 
 const ProjectCard = () => {
 
@@ -20,27 +24,27 @@ const ProjectCard = () => {
 
             techstack: [
                 {
-                    logo: <Atom className='lg:w-7 lg:h-7 md:w-5 md:h-5 w-4 h-4'/>,
+                    logo: <FaReact className='lg:w-7 lg:h-7 md:w-5 md:h-5 w-4 h-4' />,
                     name: 'React'
                 },
                 {
-                    logo: <Scaling className='lg:w-7 lg:h-7 md:w-5 md:h-5 w-4 h-4'/>,
+                    logo: <RiTailwindCssFill className='lg:w-7 lg:h-7 md:w-5 md:h-5 w-4 h-4' />,
                     name: 'Tailwind Css'
                 },
                 {
-                    logo: <FileBraces className='lg:w-7 lg:h-7 md:w-5 md:h-5 w-4 h-4'/>,
+                    logo: <IoLogoJavascript className='lg:w-7 lg:h-7 md:w-5 md:h-5 w-4 h-4' />,
                     name: 'JavaScript'
                 },
                 {
-                    logo: <ChartLine className='lg:w-7 lg:h-7 md:w-5 md:h-5 w-4 h-4'/>,
+                    logo: <ChartLine className='lg:w-7 lg:h-7 md:w-5 md:h-5 w-4 h-4' />,
                     name: 'Recharts'
                 },
                 {
-                    logo: <DatabaseBackup className='lg:w-7 lg:h-7 md:w-5 md:h-5 w-4 h-4'/>,
+                    logo: <SiRedux className='lg:w-7 lg:h-7 md:w-5 md:h-5 w-4 h-4' />,
                     name: 'Redux'
                 },
                 {
-                    logo: <Flame className='lg:w-7 lg:h-7 md:w-5 md:h-5 w-4 h-4'/>,
+                    logo: <Flame className='lg:w-7 lg:h-7 md:w-5 md:h-5 w-4 h-4' />,
                     name: 'Hot Toast'
                 }
             ],
@@ -58,27 +62,27 @@ const ProjectCard = () => {
 
             techstack: [
                 {
-                    logo: <Atom className='lg:w-7 lg:h-7 md:w-5 md:h-5 w-4 h-4'/>,
+                    logo: <FaReact className='lg:w-7 lg:h-7 md:w-5 md:h-5 w-4 h-4' />,
                     name: 'React'
                 },
                 {
-                    logo: <Scaling className='lg:w-7 lg:h-7 md:w-5 md:h-5 w-4 h-4'/>,
+                    logo: <RiTailwindCssFill className='lg:w-7 lg:h-7 md:w-5 md:h-5 w-4 h-4' />,
                     name: 'Tailwind Css'
                 },
                 {
-                    logo: <FileBraces className='lg:w-7 lg:h-7 md:w-5 md:h-5 w-4 h-4'/>,
+                    logo: <IoLogoJavascript className='lg:w-7 lg:h-7 md:w-5 md:h-5 w-4 h-4' />,
                     name: 'JavaScript'
                 },
                 {
-                    logo: <ChartNetwork className='lg:w-7 lg:h-7 md:w-5 md:h-5 w-4 h-4'/>,
+                    logo: <FaNodeJs className='lg:w-7 lg:h-7 md:w-5 md:h-5 w-4 h-4' />,
                     name: 'Node Js'
                 },
                 {
-                    logo: <Zap className='lg:w-7 lg:h-7 md:w-5 md:h-5 w-4 h-4'/>,
+                    logo: <SiExpress className='lg:w-7 lg:h-7 md:w-5 md:h-5 w-4 h-4' />,
                     name: 'Express Js'
                 },
                 {
-                    logo: <Database className='lg:w-7 lg:h-7 md:w-5 md:h-5 w-4 h-4'/>,
+                    logo: <SiMongodb className='lg:w-7 lg:h-7 md:w-5 md:h-5 w-4 h-4' />,
                     name: 'MongoDb'
                 }
             ],
@@ -96,17 +100,17 @@ const ProjectCard = () => {
 
             techstack: [
                 {
-                    logo: <CodeXml className='lg:w-7 lg:h-7 md:w-5 md:h-5 w-4 h-4'/>,
+                    logo: <FaHtml5 className='lg:w-7 lg:h-7 md:w-5 md:h-5 w-4 h-4' />,
                     name: 'Html5'
                 },
                 {
-                    logo: <Scaling className='lg:w-7 lg:h-7 md:w-5 md:h-5 w-4 h-4'/>,
+                    logo: <FaCss3Alt className='lg:w-7 lg:h-7 md:w-5 md:h-5 w-4 h-4' />,
                     name: 'Css Styling'
                 },
                 {
-                    logo: <FileBraces className='lg:w-7 lg:h-7 md:w-5 md:h-5 w-4 h-4'/>,
+                    logo: <IoLogoJavascript className='lg:w-7 lg:h-7 md:w-5 md:h-5 w-4 h-4' />,
                     name: 'JavaScript'
-                }
+                },
             ],
             time: '5 days',
 
@@ -187,8 +191,8 @@ const ProjectCard = () => {
                                         <button
                                             key={index}
                                             className="group flex items-center justify-center gap-2 py-2 rounded-md bg-white/5 backdrop-blur-md text-white transition-all duration-300 hover:bg-white/10 hover:border-white/40 hover:scale-[1.03] active:scale-[0.97] lg:text-[15px] md:text-[10px] text-[10px]"
-                                        >   
-                                        <span>{stacks.logo}</span>
+                                        >
+                                            <span>{stacks.logo}</span>
                                             {stacks.name}
                                         </button>
                                     ))}
@@ -198,19 +202,19 @@ const ProjectCard = () => {
 
                                 <div className="mt-4 sm:mt-6 md:mt-10 flex flex-col sm:flex-row justify-between gap-3 sm:gap-4 md:gap-1 w-full">
                                     <div className='flex gap-3 items-center'>
-                                        <p className='text-white flex gap-3 items-center'> <span><Timer className='lg:w-7 lg:h-7 md:w-5 md:h-5 w-4 h-4'/></span>Time Period <span className='text-cyan-500'> {time}</span> </p>
+                                        <p className='text-white flex gap-3 items-center'> <span><Timer className='lg:w-7 lg:h-7 md:w-5 md:h-5 w-4 h-4' /></span>Time Period <span className='text-cyan-500'> {time}</span> </p>
                                     </div>
                                     <div className='flex gap-1'>
                                         <button className="preview-btn px-2 sm:px-6 py-3 bg-transparent hover:shadow-[0_0_20px_rgba(255,255,255,0.1)] w-full sm:w-auto">
                                             <span className="flex items-center justify-center gap-2">
-                                                <FolderGit2 className='lg:w-5 lg:h-5 md:w-5 md:h-5 w-4 h-4'/>
+                                                <FaGithub className='lg:w-5 lg:h-5 md:w-5 md:h-5 w-4 h-4' />
                                                 GitHub
                                             </span>
                                         </button>
 
                                         <button className="preview-btn px-4 sm:px-6 py-3 bg-transparent hover:shadow-[0_0_20px_rgba(255,255,255,0.1)] w-full sm:w-auto">
                                             <span className="flex items-center justify-center gap-2">
-                                                <SquareArrowOutUpRight className='lg:w-5 lg:h-5 md:w-5 md:h-5 w-4 h-4'/>
+                                                <SquareArrowOutUpRight className='lg:w-5 lg:h-5 md:w-5 md:h-5 w-4 h-4' />
                                                 Preview
                                             </span>
                                         </button>

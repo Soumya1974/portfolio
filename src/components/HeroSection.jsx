@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { ArrowRight } from 'lucide-react';
 import SplitText from './SplitText';
+import { VscGithubProject } from 'react-icons/vsc';
 
 const HeroSection = () => {
 
@@ -48,7 +49,9 @@ const HeroSection = () => {
                 </div>
                 <div className='relative mx-0 md:mx-10 w-full md:w-auto sm:mt-15 lg:mt-30'>
                     
-                    <h1 className='font-semibold text-[20px] md:text-[25px] text-black'>Projects i've built</h1>
+                    <h1 className='flex gap-1 items-center font-semibold text-[20px] md:text-[25px] text-black'> <span>
+                        <VscGithubProject />
+                    </span> Projects i've built</h1>
                     <div className='flex gap-10 items-center mt-7'>
 
                         {/* <div className='w-px bg-gray-300 h-58'></div> */}
