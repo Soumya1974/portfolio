@@ -125,7 +125,7 @@ const TechStackPage = () => {
     const active = fieldOptions.find(f => f.id === stackId);
 
     return (
-        <section className="min-h-screen absolute w-full bg-yellow-500 px-1 sm:px-6 lg:px-10 sm:py-10 rounded-t-md mt-10 flex items-center py-2">
+        <section className="min-h-screen relative w-full bg-yellow-500 px-1 sm:px-6 lg:px-10 sm:py-10 rounded-t-md flex items-center py-2">
 
             <div className="w-full max-w-7xl mx-auto">
 
@@ -208,7 +208,7 @@ const TechStackPage = () => {
 
                     <div className='w-full lg:w-1/2 bg-slate-800 rounded-md p-5 h-120 flex flex-col'>
 
-                    {/*Hide title on mobile */}
+                        {/*Hide title on mobile */}
 
                         <div className='shrink-0 sm:block hidden'>
                             <AnimatePresence mode="wait">
@@ -226,34 +226,34 @@ const TechStackPage = () => {
                             </AnimatePresence>
                         </div>
 
-                            <div className='grid grid-cols-3 sm:grid-cols-3 gap-3 content-start sm:hidden'>
-                                {fieldOptions.map(({ title, id }) => (
-                                    <motion.button
-                                        key={id}
-                                        whileHover={{ scale: 1.04 }}
-                                        whileTap={{ scale: 0.96 }}
-                                        onClick={() => setStackId(id)}
-                                        className={`
+                        <div className='grid grid-cols-3 sm:grid-cols-3 gap-3 content-start sm:hidden'>
+                            {fieldOptions.map(({ title, id }) => (
+                                <motion.button
+                                    key={id}
+                                    whileHover={{ scale: 1.04 }}
+                                    whileTap={{ scale: 0.96 }}
+                                    onClick={() => setStackId(id)}
+                                    className={`
                                             relative py-2 px-3 rounded-md text-sm font-semibold h-10
                                             flex items-center justify-center gap-1
                                             transition-colors duration-200 overflow-hidden
                                             ${stackId === id
-                                                ? 'bg-yellow-500 text-slate-900 shadow-[0_0_18px_rgba(234,179,8,0.5)]'
-                                                : 'bg-slate-800 text-white hover:shadow-[0_0_14px_rgba(255,255,255,0.08)]'
-                                            }
+                                            ? 'bg-yellow-500 text-slate-900 shadow-[0_0_18px_rgba(234,179,8,0.5)]'
+                                            : 'bg-slate-800 text-white hover:shadow-[0_0_14px_rgba(255,255,255,0.08)]'
+                                        }
                                         `}
-                                    >
-                                        {stackId === id && (
-                                            <motion.span
-                                                layoutId="active-pill"
-                                                className="absolute inset-0 bg-yellow-500 -z-10 rounded-md"
-                                                transition={{ type: 'spring', stiffness: 350, damping: 28 }}
-                                            />
-                                        )}
-                                        {title}
-                                    </motion.button>
-                                ))}
-                            </div>
+                                >
+                                    {stackId === id && (
+                                        <motion.span
+                                            layoutId="active-pill"
+                                            className="absolute inset-0 bg-yellow-500 -z-10 rounded-md"
+                                            transition={{ type: 'spring', stiffness: 350, damping: 28 }}
+                                        />
+                                    )}
+                                    {title}
+                                </motion.button>
+                            ))}
+                        </div>
                         <div className='h-px w-full bg-gray-600 rounded-lg mt-5 shrink-0' />
 
                         <div className='py-5 flex-1 sm:overflow-hidden overflow-y-auto'>
