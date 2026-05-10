@@ -109,7 +109,7 @@ const TechStackPage = () => {
             langlogo: <LibraryBig className='lg:w-7 lg:h-7 md:w-5 md:h-5 w-4 h-4' />,
         },
         {
-            id: 6,
+            id: 5,
             title: 'Others',
             languages: [
                 { logo: blender, name: 'Blender' },
@@ -121,6 +121,39 @@ const TechStackPage = () => {
             langlogo: <ClipboardList className='lg:w-7 lg:h-7 md:w-5 md:h-5 w-4 h-4' />,
         },
     ];
+
+    const timeline = [
+        {
+            unique: 1,
+            para: 'Click on any category to explore the technologies, concepts, and learning journey developed throughout the timeline.',
+            year: '2025-Present',
+            desc: 'Hello! im Soumya, Software Dev'
+        },
+        {
+            unique: 2,
+            para: '2024–2025: Started as a beginner and learned Python, C, and JavaScript fundamentals, including programming basics, logic building, problem solving, and core development concepts through practice.',
+            year: '2025-2026',
+            desc: 'Explored langs like Python, C, Js'
+        },
+        {
+            unique: 3,
+            para: '2025 Feb-Apr: Learned Tailwind CSS and modern frontend workflows, focusing on responsive layouts, UI design systems, easy component structuring, and scalable styling techniques.',
+            year: '2025-Apr',
+            desc: 'Picked Tailwind as a framework'
+        },
+        {
+            unique: 4,
+            para: '2025–2026: Learned React and Redux libraries, focusing on component architecture, state management, hooks, reusable UI development, and building interactive frontend applications.',
+            year: '2025-2026',
+            desc: 'Started using React as library'
+        },
+        {
+            unique: 5,
+            para: '2025–2026: Explored Blender, video editing, and content creation workflows while learning 3D animation, visual storytelling, rendering, and creative media production techniques.',
+            year: '2025-2026',
+            desc: 'Expl Blender & freelancing in yt'
+        }
+    ]
 
     const active = fieldOptions.find(f => f.id === stackId);
 
@@ -175,20 +208,63 @@ const TechStackPage = () => {
                                     </motion.button>
                                 ))}
                             </div>
-                            <div className='bg-white w-full h-full inset-0 absolute z-0 flex justify-end px-10 py-10'>
-                                <div className='flex gap-5 h-full'>
-                                    <div className='flex items h-full relative'>
-                                        <div className='mt-20 border border-gray-400 px-5 py-2 h-20 w-70 flex flex-col'>
-                                            <h1 className='text-[20px] font-semibold'>Hello world</h1>
-                                            <p>Description</p>
-                                        </div>
-                                        <div className='w-5 h-5 bg-gray-500 rounded-full absolute top-23 left-67.5'>
 
-                                        </div>
+                            {/*timeline here */}
+                            <div className='w-full h-full inset-0 absolute z-0 flex justify-end px-10 py-10 flex-col'>
+                                <div className='flex gap-5 h-1/2'>
+                                    <div className='flex items h-full relative ml-60'>
+                                        <motion.div
+                                            key={stackId}
+                                            initial={{ opacity: -20, y: -20 }}
+                                            animate={{ opacity: 1, y: 90 }}
+                                            transition={{ duration: 1 }}
+                                            className='relative border border-gray-400 px-5 py-2 h-20 w-70 flex justify-between'>
+
+                                            <div className='flex flex-col'>
+                                                <h1
+                                                    // key={stackId}
+                                                    // initial={{ opacity: 0, y: -20 }}
+                                                    // animate={{ opacity: 1, y: 0 }}
+                                                    // transition={{ duration: 1 }}
+                                                    className='text-[20px] font-semibold text-white'>
+                                                    {timeline[stackId - 1].year}
+                                                </h1>
+
+                                                <motion.p
+                                                    key={stackId}
+                                                    initial={{ opacity: 0, y: -20 }}
+                                                    animate={{ opacity: 1, y: 0 }}
+                                                    transition={{ duration: 1 }}
+                                                    className='text-gray-400'>
+                                                    {timeline[stackId - 1].desc}
+                                                </motion.p>
+                                            </div>
+
+                                            <div className='absolute -top-2 -right-2 w-5 h-5 bg-gray-500 rounded-full border-4 border-white' />
+
+                                        </motion.div>
                                     </div>
-                                    <div className='w-px bg-gray-400 h-75' />
+                                    <div className='w-1 bg-gray-800 h-75 flex justify-center' >
+                                        <motion.div
+                                            key={stackId}
+                                            initial={{ opacity: 0, height: 0 }}
+                                            animate={{ opacity: 1, height: 160 }}
+                                            transition={{ duration: 1 }}
+                                            className='w-1 bg-yellow-500' >
+
+                                        </motion.div>
+                                    </div>
                                 </div>
+                                <motion.div
+                                    key={stackId}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 1 }}
+                                    className='flex mt-20 h-3/4 text-gray-400'>
+                                    {timeline[stackId - 1].para}
+                                </motion.div>
                             </div>
+
                         </motion.div>
 
                         <motion.div
