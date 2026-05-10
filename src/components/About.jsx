@@ -38,11 +38,14 @@ const About = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
             className='bg-white w-full min-h-screen px-4 sm:px-6 lg:px-10 py-10 flex flex-col lg:flex-row gap-10 overflow-hidden absolute'
         >
 
-            <div className='w-full lg:w-1/2 flex flex-col gap-5 justify-center md:bg-gray-700 md:px-10 md:py-10 px-0 py-0 bg-transparent md:rounded-3xl'>
+            <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                className='w-full lg:w-1/2 flex flex-col gap-5 justify-center md:bg-gray-700 md:px-10 md:py-10 px-0 py-0 bg-transparent md:rounded-3xl'>
 
                 {
                     about.map(items => {
@@ -56,7 +59,6 @@ const About = () => {
                                     duration: 0.5,
                                     delay: id * 0.1
                                 }}
-                                viewport={{ once: true }}
                                 className='flex items-center gap-4 sm:gap-5 px-4 sm:px-5 py-5 border-2 border-gray-100 rounded-xl hover:shadow-lg transition-all duration-300'
                                 key={id}
                             >
@@ -83,14 +85,13 @@ const About = () => {
                     })
                 }
 
-            </div>
+            </motion.div>
 
             <motion.div
                 initial={{ opacity: 0, x: 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
-                className='w-full lg:w-1/2 flex bg:transparent md:bg-amber-400 flex-col justify-center sm:px-5 relative mt-5 md:px-5 md:py-10 px-2'
+                className='w-full md:rotate-3 lg:w-1/2 flex bg:transparent md:bg-yellow-500 flex-col justify-center sm:px-5 relative mt-5 md:px-5 md:py-10 px-2'
             >
 
                 <div className="absolute top-20 left-10 w-60 h-28 bg-yellow-400/20 blur-3xl rounded-full rotate-12 pointer-events-none" />
@@ -107,7 +108,6 @@ const About = () => {
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.2 }}
-                    viewport={{ once: true }}
                     className='mt-8 sm:mt-10 text-base sm:text-lg lg:text-[20px] text-gray-700 leading-relaxed relative z-10'
                 >
                     I help build modern and responsive web experiences with clean UI, smooth animations, and scalable frontend architecture. I also work on interactive interfaces, creative designs, and performance focused applications using modern web technologies.
@@ -121,7 +121,6 @@ const About = () => {
                             initial={{ scale: 0.5, opacity: 0 }}
                             whileInView={{ scale: 1, opacity: 1 }}
                             transition={{ duration: 0.5 }}
-                            viewport={{ once: true }}
                             className='text-5xl sm:text-6xl lg:text-7xl font-semibold'
                         >
                             5+
@@ -139,7 +138,6 @@ const About = () => {
                             initial={{ scale: 0.5, opacity: 0 }}
                             whileInView={{ scale: 1, opacity: 1 }}
                             transition={{ duration: 0.5, delay: 0.2 }}
-                            viewport={{ once: true }}
                             className='text-5xl sm:text-6xl lg:text-7xl font-semibold'
                         >
                             8+

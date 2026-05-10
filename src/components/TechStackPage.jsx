@@ -148,12 +148,12 @@ const TechStackPage = () => {
                     <div className='w-full lg:w-1/2 flex flex-col gap-5 sm:h-120 h-0'>
 
                         <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.1, duration: 0.45 }}
-                            className='w-full bg-gray-700 rounded-md p-4 h-45 sm:h-45 lg:h-90 shrink-0 hidden sm:block'
+                            initial={{ opacity: 0, x: -90 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.8 }}
+                            className='w-full bg-gray-900 rounded-md p-4 h-45 sm:h-45 lg:h-90 shrink-0 hidden sm:block relative'
                         >
-                            <div className='grid grid-cols-2 sm:grid-cols-3 gap-3 content-start'>
+                            <div className='grid grid-cols-2 sm:grid-cols-3 gap-3 content-start z-10'>
                                 {fieldOptions.map(({ title, id, langlogo }) => (
                                     <motion.button
                                         key={id}
@@ -161,7 +161,7 @@ const TechStackPage = () => {
                                         whileTap={{ scale: 0.96 }}
                                         onClick={() => setStackId(id)}
                                         className={`
-                                            relative py-2 px-3 rounded-md text-sm font-semibold h-10
+                                            relative z-10 py-2 px-3 rounded-md text-sm font-semibold h-10
                                             flex items-center justify-around cursor-pointer gap-1
                                             transition-colors duration-400 overflow-hidden
                                             ${stackId === id
@@ -175,9 +175,27 @@ const TechStackPage = () => {
                                     </motion.button>
                                 ))}
                             </div>
+                            <div className='bg-white w-full h-full inset-0 absolute z-0 flex justify-end px-10 py-10'>
+                                <div className='flex gap-5 h-full'>
+                                    <div className='flex items h-full relative'>
+                                        <div className='mt-20 border border-gray-400 px-5 py-2 h-20 w-70 flex flex-col'>
+                                            <h1 className='text-[20px] font-semibold'>Hello world</h1>
+                                            <p>Description</p>
+                                        </div>
+                                        <div className='w-5 h-5 bg-gray-500 rounded-full absolute top-23 left-67.5'>
+
+                                        </div>
+                                    </div>
+                                    <div className='w-px bg-gray-400 h-75' />
+                                </div>
+                            </div>
                         </motion.div>
 
-                        <div className='flex-1 overflow-hidden rounded-md hidden sm:block bg-gray-800 px-2 py-2'>
+                        <motion.div
+                            initial={{ opacity: 0, y: -50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8 }}
+                            className='flex-1 overflow-hidden rounded-md hidden sm:block bg-gray-800 px-2 py-2'>
                             <div className='h-full grid grid-cols-2 sm:grid-cols-3 gap-0 px-2 py-2 content-start'>
                                 <AnimatePresence mode="wait">
                                     <motion.div
@@ -202,11 +220,15 @@ const TechStackPage = () => {
                                     </motion.div>
                                 </AnimatePresence>
                             </div>
-                        </div>
+                        </motion.div>
 
                     </div>
 
-                    <div className='w-full lg:w-1/2 bg-slate-800 rounded-md p-5 h-120 flex flex-col'>
+                    <motion.div
+                        initial={{ opacity: 0, x: 80 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.8 }}
+                        className='w-full lg:w-1/2 bg-slate-800 rounded-md p-5 h-120 flex flex-col'>
 
                         {/*Hide title on mobile */}
 
@@ -296,7 +318,7 @@ const TechStackPage = () => {
                             </AnimatePresence>
                         </div>
 
-                    </div>
+                    </motion.div>
 
                 </div>
 
