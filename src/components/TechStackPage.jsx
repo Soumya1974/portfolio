@@ -131,7 +131,7 @@ const TechStackPage = () => {
         },
         {
             unique: 2,
-            para: '2024–2025: Started as a beginner and learned Python, C, and JavaScript fundamentals, including programming basics, logic building, problem solving, and core development concepts through practice.',
+            para: '2024–2025: Started as a beginner and learned Python, C, and JavaScript fundamentals, including programming basics, logic building, problem solving, and core development.',
             year: '2025-2026',
             desc: 'Explored langs like Python, C, Js'
         },
@@ -158,7 +158,7 @@ const TechStackPage = () => {
     const active = fieldOptions.find(f => f.id === stackId);
 
     return (
-        <section className="min-h-screen relative w-full bg-yellow-500 px-1 sm:px-6 lg:px-10 sm:py-10 rounded-t-md flex items-center py-2">
+        <section className="min-h-screen relative w-full bg-gray-400 px-1 sm:px-6 lg:px-10 sm:py-10 rounded-t-md flex items-center py-2">
 
             <div className="w-full max-w-7xl mx-auto">
 
@@ -168,7 +168,7 @@ const TechStackPage = () => {
                     transition={{ duration: 0.5, ease: 'easeOut' }}
                     className='flex flex-wrap gap-2 items-center sm:mt-0 -mt-50'
                 >
-                    <h1 className='text-3xl sm:text-4xl md:text-5xl font-bold bg-slate-800 text-yellow-500 px-2'>
+                    <h1 className='text-3xl sm:text-4xl md:text-5xl font-bold bg-slate-800 text-gray-400 px-2 shadow-lg'>
                         Tech Stack
                     </h1>
                     <span className='text-lg sm:text-2xl md:text-3xl font-semibold'>
@@ -184,7 +184,7 @@ const TechStackPage = () => {
                             initial={{ opacity: 0, x: -90 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8 }}
-                            className='w-full bg-gray-900 rounded-md p-4 h-45 sm:h-45 lg:h-90 shrink-0 hidden sm:block relative'
+                            className='w-full bg-gray-500 rounded-md p-4 h-45 sm:h-45 lg:h-90 shrink-0 hidden sm:block relative'
                         >
                             <div className='grid grid-cols-2 sm:grid-cols-3 gap-3 content-start z-10'>
                                 {fieldOptions.map(({ title, id, langlogo }) => (
@@ -197,8 +197,9 @@ const TechStackPage = () => {
                                             relative z-10 py-2 px-3 rounded-md text-sm font-semibold h-10
                                             flex items-center justify-around cursor-pointer gap-1
                                             transition-colors duration-400 overflow-hidden
+                                            shadow-lg
                                             ${stackId === id
-                                                ? 'bg-yellow-500 text-slate-900 shadow-[0_0_18px_rgba(234,179,8,0.5)]'
+                                                ? 'bg-gray-400 text-black shadow-[0_0_18px_rgba(234,179,8,0.5)] border border-white'
                                                 : 'bg-slate-800 text-white hover:shadow-[0_0_14px_rgba(255,255,255,0.08)]'
                                             }
                                         `}
@@ -216,9 +217,9 @@ const TechStackPage = () => {
                                         <motion.div
                                             key={stackId}
                                             initial={{ opacity: -20, y: -20 }}
-                                            animate={{ opacity: 1, y: 90 }}
+                                            animate={{ opacity: 1, y: 100 }}
                                             transition={{ duration: 1 }}
-                                            className='relative border border-gray-400 px-5 py-2 h-20 w-70 flex justify-between'>
+                                            className='relative border border-gray-900 shadow-md px-5 py-2 h-20 w-70 flex justify-between'>
 
                                             <div className='flex flex-col'>
                                                 <h1
@@ -226,7 +227,7 @@ const TechStackPage = () => {
                                                     // initial={{ opacity: 0, y: -20 }}
                                                     // animate={{ opacity: 1, y: 0 }}
                                                     // transition={{ duration: 1 }}
-                                                    className='text-[20px] font-semibold text-white'>
+                                                    className='text-[20px] font-semibold text-black'>
                                                     {timeline[stackId - 1].year}
                                                 </h1>
 
@@ -235,40 +236,62 @@ const TechStackPage = () => {
                                                     initial={{ opacity: 0, y: -20 }}
                                                     animate={{ opacity: 1, y: 0 }}
                                                     transition={{ duration: 1 }}
-                                                    className='text-gray-400'>
+                                                    className='text-gray-black'>
                                                     {timeline[stackId - 1].desc}
                                                 </motion.p>
                                             </div>
 
-                                            <div className='absolute -top-2 -right-2 w-5 h-5 bg-gray-500 rounded-full border-4 border-white' />
+                                            <motion.div
+                                                key={stackId}
+                                                initial={{ rotateZ: 0 }}
+                                                animate={{ rotateZ: -360 }}
+                                                transition={{ duration: 1 }}
+                                                className='absolute -top-2 -right-2 w-5 h-5 bg-gray-800 rounded-full border-4 border-gray-800 flex items-center justify-center text-gray-400 text-center' >
+                                                ?
+                                            </motion.div>
 
                                         </motion.div>
                                     </div>
-                                    <div className='w-1 bg-gray-800 h-75 flex justify-center' >
+                                    <div className='w-1 bg-gray-600 h-75 flex justify-center' >
                                         <motion.div
                                             key={stackId}
-                                            initial={{ opacity: 0, height: 0 }}
-                                            animate={{ opacity: 1, height: 160 }}
+                                            initial={{ height: 0 }}
+                                            animate={{ height: 200 }}
                                             transition={{ duration: 1 }}
-                                            className='w-1 bg-yellow-500' >
+                                            className='w-1 bg-gray-800' >
 
                                         </motion.div>
                                     </div>
                                 </div>
                                 <motion.div
                                     key={stackId}
-                                    initial={{ opacity: 0, y: 20 }}
+                                    initial={{ opacity: 0, y: -100 }}
                                     animate={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 1 }}
-                                    className='flex mt-20 h-3/4 text-gray-400'>
-                                    {timeline[stackId - 1].para}
+                                    transition={{ duration: 1.1 }}
+                                    className='flex relative mt-15 h-3/4 mr-7 text-black border bg-gray-500 px-2 py-2 border-gray-800 shadow-md'>
+                                    <motion.p
+                                        key={stackId}
+                                        initial={{ opacity: 0, y: -15 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ duration: 1.1 }}
+                                    >
+                                        {timeline[stackId - 1].para}
+                                    </motion.p>
+                                    <motion.div
+                                        key={stackId}
+                                        initial={{ rotateZ: 0 }}
+                                        animate={{ rotateZ: -360 }}
+                                        transition={{ duration: 1 }}
+                                        className='absolute -top-2 -right-2 w-5 h-5 bg-gray-800 rounded-full border-4 border-gray-800 flex items-center justify-center text-gray-400 text-center' >
+                                        A
+                                    </motion.div>
                                 </motion.div>
                             </div>
 
                         </motion.div>
 
                         <motion.div
-                            initial={{ opacity: 0, y: -50 }}
+                            initial={{ opacity: 0, y: 80 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8 }}
                             className='flex-1 overflow-hidden rounded-md hidden sm:block bg-gray-800 px-2 py-2'>
@@ -352,7 +375,7 @@ const TechStackPage = () => {
                                 </motion.button>
                             ))}
                         </div>
-                        <div className='h-px w-full bg-gray-600 rounded-lg mt-5 shrink-0' />
+                        <div className='h-px w-full bg-gray-400 rounded-lg mt-5 shrink-0' />
 
                         <div className='py-5 flex-1 sm:overflow-hidden overflow-y-auto'>
                             <AnimatePresence mode="wait">
@@ -377,7 +400,7 @@ const TechStackPage = () => {
                                                     transition: { duration: 0.35 }
                                                 }}
                                                 className='p-3 bg-gray-700 rounded-lg w-16 h-16 flex items-center justify-center
-                                                           shadow-md hover:shadow-[0_0_18px_rgba(234,179,8,0.3)] transition-shadow duration-300'
+                                                           shadow-md hover:shadow-[0_0_18px_#607B8F] transition-shadow duration-300'
                                             >
                                                 <img
                                                     src={lang.logo}

@@ -28,9 +28,9 @@ const About = () => {
     ]
 
     const colors = {
-        1: '#2519A66',
-        2: '#FFC94D',
-        3: '#DE802B'
+        1: '#91ADC8',
+        2: '#9CAFAA',
+        3: '#A6AEBF'
     }
 
     return (
@@ -38,14 +38,14 @@ const About = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
-            className='bg-white w-full min-h-screen px-4 sm:px-6 lg:px-10 py-10 flex flex-col lg:flex-row gap-10 overflow-hidden absolute'
+            className='bg-gray-500 w-full min-h-screen px-10 sm:px-6 lg:px-20 py-10 flex flex-col lg:flex-row gap-2 overflow-hidden absolute'
         >
 
             <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
-                className='w-full lg:w-1/2 flex flex-col gap-5 justify-center md:bg-gray-700 md:px-10 md:py-10 px-0 py-0 bg-transparent md:rounded-3xl'>
+                className='w-full lg:w-1/2 flex flex-col gap-5 justify-center md:px-10 md:py-10 px-0 py-0 bg-transparent md:rounded-3xl'>
 
                 {
                     about.map(items => {
@@ -59,13 +59,13 @@ const About = () => {
                                     duration: 0.5,
                                     delay: id * 0.1
                                 }}
-                                className='flex items-center gap-4 sm:gap-5 px-4 sm:px-5 py-5 border-2 border-gray-100 rounded-xl hover:shadow-lg transition-all duration-300'
+                                className='flex items-center gap-4 sm:gap-5 px-4 sm:px-5 py-5 border border-gray-600 rounded-xl hover:shadow-lg transition-all duration-300'
                                 key={id}
                             >
 
                                 <h1
                                     style={{ backgroundColor: colors[id] }}
-                                    className='rounded-full min-w-14 min-h-14 w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center text-xl bg-gray-500'
+                                    className='rounded-full min-w-14 min-h-14 w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center text-xl bg-gray-300'
                                 >
                                     {logo}
                                 </h1>
@@ -75,7 +75,7 @@ const About = () => {
                                         {title}
                                     </h1>
 
-                                    <p className='text-sm sm:text-base font-medium text-gray-600 mt-1'>
+                                    <p className='text-sm sm:text-base font-medium text-gray-900 mt-1'>
                                         {projects}
                                     </p>
                                 </div>
@@ -88,16 +88,33 @@ const About = () => {
             </motion.div>
 
             <motion.div
-                initial={{ opacity: 0, x: 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-                className='w-full md:rotate-3 lg:w-1/2 flex bg:transparent md:bg-yellow-500 flex-col justify-center sm:px-5 relative mt-5 md:px-5 md:py-10 px-2'
+                initial={{
+                    opacity: 0,
+                    rotate: -20,
+                    y: 100
+                }}
+
+                whileInView={{
+                    opacity: 1,
+                    rotate: 0,
+                    y: 0
+                }}
+
+                transition={{
+                    duration: 0.8
+                }}
+
+                viewport={{
+                    once: false,
+                    amount: 0.3
+                }}
+                className='w-full lg:w-1/2 flex bg:transparent flex-col justify-center sm:px-5 relative mt-5 md:px-5 md:py-10 px-2'
             >
 
-                <div className="absolute top-20 left-10 w-60 h-28 bg-yellow-400/20 blur-3xl rounded-full rotate-12 pointer-events-none" />
+                <div className="absolute top-20 left-10 w-60 h-28 bg-gray-400 blur-3xl rounded-full rotate-12 pointer-events-none" />
 
                 <h1 className='relative z-10 text-3xl sm:text-4xl md:text-5xl font-bold inline-block'>
-                    <span className='bg-gray-700 text-black px-2'>
+                    <span className='bg-gray-700 text-gray-400 px-2 shadow-md'>
                         What do i help ?
                     </span>
                 </h1>
@@ -108,7 +125,7 @@ const About = () => {
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.2 }}
-                    className='mt-8 sm:mt-10 text-base sm:text-lg lg:text-[20px] text-gray-700 leading-relaxed relative z-10'
+                    className='mt-8 sm:mt-10 text-base sm:text-lg lg:text-[20px] text-black leading-relaxed relative z-10'
                 >
                     I help build modern and responsive web experiences with clean UI, smooth animations, and scalable frontend architecture. I also work on interactive interfaces, creative designs, and performance focused applications using modern web technologies.
                 </motion.p>
@@ -126,7 +143,7 @@ const About = () => {
                             5+
                         </motion.h1>
 
-                        <p className='text-sm sm:text-base text-gray-600 mt-2'>
+                        <p className='text-sm sm:text-base text-gray-800 mt-2'>
                             Projects Completed
                         </p>
 
@@ -143,7 +160,7 @@ const About = () => {
                             8+
                         </motion.h1>
 
-                        <p className='text-sm sm:text-base text-gray-600 mt-2'>
+                        <p className='text-sm sm:text-base text-gray-800 mt-2'>
                             Technologies Used
                         </p>
 
