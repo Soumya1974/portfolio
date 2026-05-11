@@ -27,7 +27,7 @@ const HeroSection = () => {
     ];
 
     return (
-        <div className='sticky top-0 bg-gray-100'>
+        <div className='sticky top-0 bg-white'>
             <div className='flex flex-col md:flex-row w-full px-5 md:px-17 items-center gap-10 md:gap-20 justify-between'>
                 <div className='mt-20'>
 

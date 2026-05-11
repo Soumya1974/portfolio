@@ -158,13 +158,13 @@ const TechStackPage = () => {
     const active = fieldOptions.find(f => f.id === stackId);
 
     return (
-        <section className="min-h-screen relative w-full bg-gray-400 px-1 sm:px-6 lg:px-10 sm:py-10 rounded-t-md flex items-center py-2">
+        <section className="min-h-screen relative w-full bg-gray-400 px-1 sm:px-6 lg:px-10 sm:py-10 flex items-center py-2">
 
             <div className="w-full max-w-7xl mx-auto">
 
                 <motion.div
-                    initial={{ opacity: 0, y: -20 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, x: 50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5, ease: 'easeOut' }}
                     className='flex flex-wrap gap-2 items-center sm:mt-0 -mt-50'
                 >
@@ -217,7 +217,10 @@ const TechStackPage = () => {
                                         <motion.div
                                             key={stackId}
                                             initial={{ opacity: -20, y: -20 }}
-                                            animate={{ opacity: 1, y: 100 }}
+                                            whileInView={{
+                                                opacity: 1,
+                                                y: 100
+                                            }}
                                             transition={{ duration: 1 }}
                                             className='relative border border-gray-900 shadow-md px-5 py-2 h-20 w-70 flex justify-between'>
 
@@ -234,7 +237,10 @@ const TechStackPage = () => {
                                                 <motion.p
                                                     key={stackId}
                                                     initial={{ opacity: 0, y: -20 }}
-                                                    animate={{ opacity: 1, y: 0 }}
+                                                    whileInView={{
+                                                        opacity: 1,
+                                                        y: 0
+                                                    }}
                                                     transition={{ duration: 1 }}
                                                     className='text-gray-black'>
                                                     {timeline[stackId - 1].desc}
@@ -244,7 +250,9 @@ const TechStackPage = () => {
                                             <motion.div
                                                 key={stackId}
                                                 initial={{ rotateZ: 0 }}
-                                                animate={{ rotateZ: -360 }}
+                                                whileInView={{
+                                                    rotateZ: -360
+                                                }}
                                                 transition={{ duration: 1 }}
                                                 className='absolute -top-2 -right-2 w-5 h-5 bg-gray-800 rounded-full border-4 border-gray-800 flex items-center justify-center text-gray-400 text-center' >
                                                 ?
@@ -256,7 +264,9 @@ const TechStackPage = () => {
                                         <motion.div
                                             key={stackId}
                                             initial={{ height: 0 }}
-                                            animate={{ height: 200 }}
+                                            whileInView={{
+                                                height: 200
+                                            }}
                                             transition={{ duration: 1 }}
                                             className='w-1 bg-gray-800' >
 
@@ -266,13 +276,19 @@ const TechStackPage = () => {
                                 <motion.div
                                     key={stackId}
                                     initial={{ opacity: 0, y: -100 }}
-                                    animate={{ opacity: 1, y: 0 }}
+                                    whileInView={{
+                                        opacity: 1,
+                                        y: 0
+                                    }}
                                     transition={{ duration: 1.1 }}
                                     className='flex relative mt-15 h-3/4 mr-7 text-black border bg-gray-500 px-2 py-2 border-gray-800 shadow-md'>
                                     <motion.p
                                         key={stackId}
                                         initial={{ opacity: 0, y: -15 }}
-                                        animate={{ opacity: 1, y: 0 }}
+                                        whileInView={{
+                                            opacity: 1,
+                                            y: 0
+                                        }}
                                         transition={{ duration: 1.1 }}
                                     >
                                         {timeline[stackId - 1].para}
@@ -280,7 +296,9 @@ const TechStackPage = () => {
                                     <motion.div
                                         key={stackId}
                                         initial={{ rotateZ: 0 }}
-                                        animate={{ rotateZ: -360 }}
+                                        whileInView={{
+                                            rotateZ: -360
+                                        }}
                                         transition={{ duration: 1 }}
                                         className='absolute -top-2 -right-2 w-5 h-5 bg-gray-800 rounded-full border-4 border-gray-800 flex items-center justify-center text-gray-400 text-center' >
                                         A
