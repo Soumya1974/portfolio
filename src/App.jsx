@@ -6,13 +6,10 @@ import Index from './pages/Index'
 function App() {
 
   return (
-    <div className='no-scrollbar'>
-      <>
-        <Navbar/>
-      </>
-      <>
-        <Index/>
-      </>
+    <div>
+
+      <Index />
+
     </div>
   )
 }

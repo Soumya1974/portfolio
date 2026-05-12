@@ -34,11 +34,8 @@ const About = () => {
     }
 
     return (
-        <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            className='bg-gray-500 w-full min-h-screen px-10 sm:px-6 lg:px-20 py-10 flex flex-col lg:flex-row gap-2 overflow-hidden absolute'
+        <div
+            className='bg-gray-500 w-full min-h-screen px-10 sm:px-6 lg:px-20 py-10 flex flex-col lg:flex-row gap-2 overflow-hidden relative'
         >
 
             <motion.div
@@ -90,13 +87,11 @@ const About = () => {
             <motion.div
                 initial={{
                     opacity: 0,
-                    rotate: -20,
                     y: 100
                 }}
 
                 whileInView={{
                     opacity: 1,
-                    rotate: 0,
                     y: 0
                 }}
 
@@ -170,7 +165,7 @@ const About = () => {
 
             </motion.div>
 
-        </motion.div>
+        </div>
     )
 }
 

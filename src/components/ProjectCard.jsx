@@ -126,23 +126,22 @@ const ProjectCard = () => {
                 return (
                     <div
                         key={id}
-                        className={` w-full md:w-screen  lg:w-[90vw] h-auto min-h-105 sm:min-h-125 md:min-h-0 mb-6 sm:mb-10 md:mb-0 sticky top-4 sm:top-6 md:top-0 px-0 sm:px-4 py-3 sm:py-5 md:py-10 bg-transparent`}
+                        className="w-full lg:w-[90vw] h-auto mb-6 sm:mb-8 md:mb-0 sticky top-4 md:top-0 px-2 sm:px-4 py-3 sm:py-5 md:py-10 bg-transparent"
                     >
 
                         <div
-                            className={` hidden md:flex gap-5 w-fit max-w-50 lg:max-w-[30vw] bg-slate-900 justify-center items-center rounded-lg transition-all duration-700 px-5 py-3 border border-gray-300
-                            ${hoveredId === id
-                                    ? "ml-[65%] opacity-100"
-                                    : "ml-0 opacity-0"
-                                }`}
+                            className={`hidden md:flex gap-5 w-fit max-w-[30vw] bg-slate-900 justify-center items-center rounded-lg transition-all duration-700 px-5 py-3 border border-gray-300
+            ${hoveredId === id ? "ml-[65%] opacity-100" : "ml-0 opacity-0"}`}
                         >
-                            <p className="text-white flex gap-2"> <span><StickyNote /></span>  0{id}/3</p>
+                            <p className="text-white flex gap-2"><span><StickyNote /></span>0{id}/3</p>
                             <p className="text-white">{title}</p>
-
                         </div>
 
                         <div
-                            className={` flex flex-col md:flex-row justify-between gap-4 sm:gap-5 md:gap-8 mt-3 sm:mt-4 md:mt-5 px-4 sm:px-6 md:px-10 py-5 sm:py-6 md:py-10 bg-slate-900 items-center border-2 border-gray-300 rounded-lg overflow-hidden transition-all duration-700
+                            className={`flex flex-col md:flex-row justify-between gap-4 sm:gap-6     md:gap-8 mt-3 sm:mt-4 md:mt-5
+                             px-4 sm:px-6 md:px-10 py-5 sm:py-6 md:py-10
+                            bg-slate-900 items-center border-2 border-gray-300 rounded-lg overflow-hidden
+                            transition-all duration-700
                                 ${hoveredId === id
                                     ? "md:scale-[1.03] md:shadow-2xl md:shadow-black/60 md:transform-[perspective(1000px)_rotateX(-3deg)]"
                                     : "scale-100"
@@ -152,7 +151,7 @@ const ProjectCard = () => {
                             onMouseLeave={() => setHoveredId(null)}
                         >
 
-                            <div className="w-full md:w-1/2 lg:w-[40vw] h-55 sm:h-70 md:h-75 lg:h-[25vw] rounded-lg overflow-hidden shrink-0">
+                            <div className="w-full md:w-1/2 lg:w-[40vw] h-48 sm:h-64 md:h-72 lg:h-[25vw] rounded-lg overflow-hidden shrink-0">
                                 <img
                                     src={image}
                                     loading="lazy"
@@ -162,11 +161,10 @@ const ProjectCard = () => {
 
                             <div className="w-full flex flex-col items-center">
 
-                                <div className="text-white md:mt-10 w-full">
-
+                                <div className="text-white w-full md:mt-10">
                                     <SplitText
                                         text={title}
-                                        className="text-sm sm:text-base md:text-2xl w-full md:w-[25vw] font-semibold"
+                                        className="text-base sm:text-lg md:text-2xl w-full font-semibold"
                                         delay={500} duration={1.9} ease="power3.out"
                                         splitType="words"
                                         from={{ opacity: 0, y: 40 }} to={{ opacity: 1, y: 0 }}
@@ -174,23 +172,24 @@ const ProjectCard = () => {
                                     />
                                 </div>
 
-                                <div className='h-px w-full bg-gray-600 rounded-lg mt-3' />
+                                <div className="h-px w-full bg-gray-600 rounded-lg mt-3" />
 
-                                <div className="hidden sm:block w-full md:w-[37vw] mt-4 sm:mt-5 md:mt-5 text-gray-400">
+                                <div className="hidden sm:block w-full mt-4 md:mt-5 text-gray-400">
                                     <SplitText
                                         text={description}
-                                        className="text-sm md:text-[16px] font-semibold"
+                                        className="text-sm md:text-base font-semibold"
                                         delay={10} duration={1.9} ease="power3.out"
                                         splitType="words"
                                         from={{ opacity: 0, y: 40 }} to={{ opacity: 1, y: 0 }}
                                         threshold={0.1} rootMargin="-100px" showCallback={false}
                                     />
                                 </div>
-                                <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 mt-2 sm:mt-5 w-full">
+
+                                <div className="grid grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-3 mt-3 sm:mt-5 w-full">
                                     {techstack.map((stacks, index) => (
                                         <button
                                             key={index}
-                                            className="group flex items-center justify-center gap-2 py-2 rounded-md bg-white/5 backdrop-blur-md text-white transition-all duration-300 hover:bg-white/10 hover:border-white/40 hover:scale-[1.03] active:scale-[0.97] lg:text-[15px] md:text-[10px] text-[10px]"
+                                            className="flex items-center justify-center gap-1.5 py-2 rounded-md bg-white/5 backdrop-blur-md text-white text-[10px] sm:text-xs lg:text-sm transition-all duration-300 hover:bg-white/10 hover:border-white/40 hover:scale-[1.03] active:scale-[0.97]"
                                         >
                                             <span>{stacks.logo}</span>
                                             {stacks.name}
@@ -198,23 +197,29 @@ const ProjectCard = () => {
                                     ))}
                                 </div>
 
-                                <div className='h-px w-full bg-gray-800 rounded-lg mt-5' />
+                                <div className="h-px w-full bg-gray-800 rounded-lg mt-5" />
 
-                                <div className="mt-4 sm:mt-6 md:mt-10 flex flex-col sm:flex-row justify-between gap-3 sm:gap-4 md:gap-1 w-full">
-                                    <div className='flex gap-3 items-center'>
-                                        <p className='text-white flex gap-3 items-center'> <span><Timer className='lg:w-7 lg:h-7 md:w-5 md:h-5 w-4 h-4' /></span>Time Period <span className='text-cyan-500'> {time}</span> </p>
+
+                                <div className="mt-4 sm:mt-6 md:mt-10 flex flex-col xs:flex-row justify-between gap-3 md:gap-1 w-full">
+                                    <div className="flex gap-2 items-center">
+                                        <p className="text-white flex gap-2 items-center text-sm sm:text-base">
+                                            <span><Timer className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" /></span>
+                                            Time Period
+                                            <span className="text-cyan-500">{time}</span>
+                                        </p>
                                     </div>
-                                    <div className='flex gap-1'>
-                                        <button className="preview-btn px-2 sm:px-6 py-3 bg-transparent hover:shadow-[0_0_20px_rgba(255,255,255,0.1)] w-full sm:w-auto">
-                                            <span className="flex items-center justify-center gap-2">
-                                                <FaGithub className='lg:w-5 lg:h-5 md:w-5 md:h-5 w-4 h-4' />
+
+                                    <div className="flex gap-1">
+                                        <button className="preview-btn px-3 sm:px-5 py-2.5 bg-transparent hover:shadow-[0_0_20px_rgba(255,255,255,0.1)] w-full xs:w-auto">
+                                            <span className="flex items-center justify-center gap-2 text-sm sm:text-base">
+                                                <FaGithub className="w-4 h-4 sm:w-5 sm:h-5" />
                                                 GitHub
                                             </span>
                                         </button>
 
-                                        <button className="preview-btn px-4 sm:px-6 py-3 bg-transparent hover:shadow-[0_0_20px_rgba(255,255,255,0.1)] w-full sm:w-auto">
-                                            <span className="flex items-center justify-center gap-2">
-                                                <SquareArrowOutUpRight className='lg:w-5 lg:h-5 md:w-5 md:h-5 w-4 h-4' />
+                                        <button className="preview-btn px-3 sm:px-5 py-2.5 bg-transparent hover:shadow-[0_0_20px_rgba(255,255,255,0.1)] w-full xs:w-auto">
+                                            <span className="flex items-center justify-center gap-2 text-sm sm:text-base">
+                                                <SquareArrowOutUpRight className="w-4 h-4 sm:w-5 sm:h-5" />
                                                 Preview
                                             </span>
                                         </button>
