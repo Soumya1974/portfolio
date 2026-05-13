@@ -33,7 +33,7 @@ const HeroSection = () => {
                 <div className='mt-12 sm:mt-16 md:mt-20 w-full'>
                     <SplitText
                         text="Hello, I'm Soumya."
-                        className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-semibold w-full"
+                        className="text-6xl sm:text-6xl md:text-8xl lg:text-9xl font-semibold w-full"
                         delay={500}
                         duration={1.9}
                         ease="power3.out"

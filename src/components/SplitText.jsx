@@ -39,6 +39,7 @@ const SplitText = ({
       });
     }
   }, []);
+  console.log("first")
 
   useGSAP(
     () => {
