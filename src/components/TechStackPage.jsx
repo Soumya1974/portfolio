@@ -158,7 +158,7 @@ const TechStackPage = () => {
     const active = fieldOptions.find(f => f.id === stackId);
 
     return (
-        <section className="sm:min-h-screen h-full relative w-full bg-gray-500 px-3 sm:px-6 lg:px-10 py-8 sm:py-10 flex items-center">
+        <section className="sm:min-h-screen h-full relative w-full bg-white px-3 sm:px-6 lg:px-10 py-8 sm:py-10 flex items-center">
 
             <div className="w-full max-w-7xl mx-auto">
 
@@ -176,7 +176,7 @@ const TechStackPage = () => {
                     </span>
                 </motion.div>
 
-                <div className='w-full flex flex-col lg:flex-row gap-5'>
+                <div className='w-full px-5 py-5 flex flex-col lg:flex-row gap-5'>
 
                     <div className='w-full lg:w-1/2 flex flex-col gap-5'>
 
@@ -264,7 +264,7 @@ const TechStackPage = () => {
                                     initial={{ opacity: 0, y: -100 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 1.1 }}
-                                    className='flex relative mt-30 sm:mt-10 lg:mt-10 xl:mt-20  lg:h-auto xl:h-40 mr-0 lg:mr-7 xl:mr-9.5 text-black border px-3 sm:px-4 py-4 border-gray-800 shadow-md'
+                                    className='flex relative mt-30 sm:mt-10 lg:mt-10 xl:mt-20  lg:h-auto xl:h-40 mr-0 lg:mr-7 xl:mr-7 text-black border px-3 sm:px-4 py-4 border-gray-800 shadow-md'
                                 >
                                     <motion.p
                                         key={stackId}

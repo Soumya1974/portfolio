@@ -17,7 +17,7 @@ const EducationTimeline = () => {
     ];
 
     return (
-        <section className='min-h-screen w-full bg-gray-500 px-4 sm:px-8 lg:px-20 py-10 sm:py-20 overflow-hidden relative'>
+        <section className='min-h-screen w-full bg-white px-4 sm:px-8 lg:px-20 py-10 sm:py-20 overflow-hidden relative'>
 
             <div className='max-w-6xl mx-auto'>
 

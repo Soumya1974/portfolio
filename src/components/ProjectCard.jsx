@@ -119,7 +119,7 @@ const ProjectCard = () => {
     ];
 
     return (
-        <div className="flex flex-col items-center relative bg-gray-500 px-0 md:px-5 z-20">
+        <div className="flex flex-col items-center relative bg-white px-0 md:px-5 z-20">
             {projectPreview.map((items) => {
                 const { id, title, description, techstack, image, time } = items;
 

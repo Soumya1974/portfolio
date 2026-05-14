@@ -35,7 +35,7 @@ const About = () => {
 
     return (
         <div
-            className='bg-gray-500 w-full h-full px-2 sm:px-6 lg:px-20 py-5 flex-col gap-2 overflow-hidden relative sm:mt-0 items-center'
+            className='bg-white w-full h-full px-2 sm:px-6 lg:px-20 py-5 flex-col gap-2 overflow-hidden relative sm:mt-0 items-center'
         >
             <div className='hidden md:block ml-10 sm:px-5 sm:py-3 px-2 py-2 bg-gray-800 text-gray-300 w-50'>
                 <h1 className='text-center md:text-3xl font-semibold text-xl'>
@@ -171,8 +171,6 @@ const About = () => {
 
                 </motion.div>
             </div>
-
-            <div className='h-px w-full bg-gray-600 rounded-lg mt-4 sm:mt-5 shrink-0' />
 
         </div>
     )
