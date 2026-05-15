@@ -264,8 +264,19 @@ const TechStackPage = () => {
                                     initial={{ opacity: 0, y: -100 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 1.1 }}
-                                    className='flex relative mt-30 sm:mt-10 lg:mt-10 xl:mt-20  lg:h-auto xl:h-40 mr-0 lg:mr-7 xl:mr-7 text-black border px-3 sm:px-4 py-4 border-gray-800 shadow-md'
+                                    className='flex relative mt-30 sm:mt-10 lg:mt-10 xl:mt-20  lg:h-auto xl:h-40 mr-0 lg:mr-7 xl:mr-7 text-black border px-3 sm:px-4 py-4 border-gray-800 shadow-md`'
                                 >
+                                    <motion.p
+                                        key={stackId}
+                                        initial={{ opacity: 0, y: -15 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        transition={{ duration: 1.1 }}
+                                        className='text-sm xl:text-md'
+                                    >
+                                        {timeline[stackId - 1].para}
+
+                                    </motion.p>
+                                    {/*here */}
                                     <motion.p
                                         key={stackId}
                                         initial={{ opacity: 0, y: -15 }}
