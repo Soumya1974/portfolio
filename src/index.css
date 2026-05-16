@@ -3,12 +3,21 @@
 @import "shadcn/tailwind.css";
 @import "@fontsource-variable/geist";
 
-body{
-  background-color: #d1d5db;
+body {
+  background-color: white;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 @custom-variant dark (&:is(.dark *));
@@ -17,6 +26,7 @@ html {
   0% {
     transform: translateX(0%);
   }
+
   100% {
     transform: translateX(-50%);
   }
@@ -149,9 +159,11 @@ html {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+
   html {
     @apply font-sans;
   }

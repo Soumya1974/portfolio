@@ -17,7 +17,7 @@ const EducationTimeline = () => {
     ];
 
     return (
-        <section className='min-h-screen w-full bg-white px-4 sm:px-8 lg:px-20 py-10 sm:py-20 overflow-hidden relative'>
+        <section className='min-h-screen w-full bg-gray-300 px-4 sm:px-8 lg:px-20 py-10 sm:py-20 overflow-hidden relative'>
 
             <div className='max-w-6xl mx-auto'>
 
@@ -66,7 +66,7 @@ const EducationTimeline = () => {
 
                                 <div className='w-full sm:w-[45%] ml-12 sm:ml-0'>
 
-                                    <div className='relative border border-gray-900 bg-gray-200 p-6 shadow-lg shadow-gray-500'>
+                                    <div className='relative border border-gray-200 bg-gray-200 p-6 shadow-sm shadow-gray-400'>
 
                                         <div className='absolute top-5 -left-10.5 sm:hidden w-5 h-5 rounded-full border-4 border-gray-100 bg-gray-300' />
 

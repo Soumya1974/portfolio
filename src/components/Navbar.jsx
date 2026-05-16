@@ -6,7 +6,7 @@ const Navbar = ({ onConfirm }) => {
   return (
 
 
-    <nav className='z-50 w-full bg-white border-b border-gray-100 shadow-sm'>
+    <nav className='z-50 w-full bg-white border-b border-gray-100 fixed top-0'>
 
       <div className='flex justify-between items-center h-16 sm:h-20 px-5 sm:px-8 md:px-17'>
 
