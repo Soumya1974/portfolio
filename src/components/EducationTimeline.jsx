@@ -35,7 +35,7 @@ const EducationTimeline = () => {
 
                 <div className='relative'>
 
-                    <div className='absolute left-4 sm:left-1/2 top-0 -translate-x-1/2 w-1 h-full bg-gray-600' />
+                    <div className='absolute left-4 sm:left-1/2 top-0 -translate-x-1/2 w-px h-full bg-gray-900' />
 
                     {
                         educationData.map((item, index) => (
@@ -66,27 +66,27 @@ const EducationTimeline = () => {
 
                                 <div className='w-full sm:w-[45%] ml-12 sm:ml-0'>
 
-                                    <div className='relative border border-gray-800 bg-gray-900 p-6 shadow-[0_0_20px_rgba(255,255,255,0.05)]'>
+                                    <div className='relative border border-gray-900 bg-gray-200 p-6 shadow-lg shadow-gray-500'>
 
-                                        <div className='absolute top-5 -left-10.5 sm:hidden w-5 h-5 rounded-full border-4 border-black bg-slate-700' />
+                                        <div className='absolute top-5 -left-10.5 sm:hidden w-5 h-5 rounded-full border-4 border-gray-100 bg-gray-300' />
 
-                                        <div className={`hidden sm:block absolute top-8 w-5 h-5 rounded-full bg-slate-700 border-4 border-black ${
+                                        <div className={`hidden sm:block absolute top-8 w-5 h-5 rounded-full bg-slate-500 border-4 border-gray-300 ${
                                             index % 2 === 0
                                                 ? '-right-13'
                                                 : '-left-13'
                                         }`} />
 
-                                        <h1 className='text-white text-xl font-bold'>
+                                        <h1 className='text-gray-900 text-xl font-bold'>
                                             {item.year}
                                         </h1>
                                         
-                                        <div className='h-px w-full bg-gray-400 rounded-lg mt-4 sm:mt-5 shrink-0' />
+                                        <div className='h-px w-full bg-gray-900 rounded-lg mt-4 sm:mt-5 shrink-0' />
 
-                                        <h2 className='text-white text-2xl font-semibold mt-4'>
+                                        <h2 className='text-gray-900 text-2xl font-semibold mt-4'>
                                             {item.title}
                                         </h2>
 
-                                        <p className='text-gray-300 mt-4 leading-relaxed'>
+                                        <p className='text-gray-600 mt-4 leading-relaxed'>
                                             {item.desc}
                                         </p>
 

@@ -198,8 +198,8 @@ const TechStackPage = () => {
                                         flex items-center justify-around cursor-pointer gap-1
                                         transition-colors duration-400 overflow-hidden shadow-lg
                                         ${stackId === id
-                                                ? 'bg-gray-400 text-black shadow-[0_0_18px_rgba(234,179,8,0.5)] border border-white'
-                                                : 'bg-slate-800 text-white hover:shadow-[0_0_14px_rgba(255,255,255,0.08)]'
+                                                ? 'bg-yellow-500 text-black shadow-[0_0_18px_rgba(234,179,8,0.5)] border border-yellow-500'
+                                                : 'bg-gray-700 text-white hover:shadow-[0_0_14px_rgba(255,255,255,0.08)]'
                                             }
                                         `}
                                     >
@@ -210,11 +210,11 @@ const TechStackPage = () => {
                             </div>
 
                             {/*tech stack here */}
-                            <div className='w-full h-full inset-0 absolute z-0 flex justify-end px-4 sm:px-6 lg:px-7 py-4 sm:py-6 flex-col items-center overflow-hidden'>
+                            <div className='w-full h-full inset-0 absolute z-0 flex justify-end px-4 sm:px-6 lg:px-7 py-4 sm:py-6 flex-col items-center overflow-hidden bg-gray-300'>
 
                                 <div className='flex flex-col lg:flex-row gap-5 h-auto lg:h-1/2 sm:mr-0 -mr-13'>
 
-                                    <div className='flex h-full relative lg:ml-20 xl:ml-70 w-full lg:w-auto'>
+                                    <div className='hidden sm:flex h-full relative lg:ml-20 xl:ml-70 w-full lg:w-auto'>
                                         <motion.div
                                             key={stackId}
                                             initial={{ opacity: 0, y: -20 }}
@@ -247,13 +247,13 @@ const TechStackPage = () => {
                                         </motion.div>
                                     </div>
 
-                                    <div className='hidden md:block lg:flex w-1 bg-gray-700 h-75 justify-center lg:mr-0 xl:mr-10'>
+                                    <div className='hidden md:block lg:flex w-1 bg-gray-400 h-75 justify-center lg:mr-0 xl:mr-10'>
                                         <motion.div
                                             key={stackId}
                                             initial={{ height: 0 }}
                                             whileInView={{ height: 200 }}
                                             transition={{ duration: 1 }}
-                                            className='w-1 bg-gray-900'
+                                            className='w-1 bg-yellow-500'
                                         />
                                     </div>
 
@@ -294,7 +294,7 @@ const TechStackPage = () => {
                             initial={{ opacity: 0, y: 80 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8 }}
-                            className='sm:flex hidden flex-1 overflow-hidden rounded-md bg-gray-900 px-2 py-2 min-h-32'
+                            className='sm:flex hidden flex-1 overflow-hidden rounded-md bg-gray-400 px-2 py-2 min-h-32'
                         >
                             <div className='w-full grid grid-cols-2 sm:grid-cols-3 gap-2 px-2 py-2 content-start'>
                                 <AnimatePresence mode="wait">
@@ -310,7 +310,7 @@ const TechStackPage = () => {
                                             <motion.div
                                                 key={index}
                                                 variants={itemVariants}
-                                                className="relative px-3 sm:px-4 h-10 bg-slate-900 rounded-md flex items-center justify-center shadow-lg"
+                                                className="relative px-3 sm:px-4 h-10 bg-gray-600 rounded-md flex items-center justify-center shadow-lg"
                                             >
                                                 <span className="relative z-10 text-white font-semibold text-xs sm:text-sm text-center">
                                                     {tag}
@@ -328,7 +328,7 @@ const TechStackPage = () => {
                         initial={{ opacity: 0, y: 80 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
-                        className='w-full lg:w-1/2 bg-slate-900 rounded-md p-4 sm:p-5 sm:h-125 h-70 flex flex-col overflow-hidden'
+                        className='w-full lg:w-1/2 bg-gray-500 rounded-md p-4 sm:p-5 sm:h-125 h-70 flex flex-col overflow-hidden'
                     >
 
                         <div className='shrink-0'>

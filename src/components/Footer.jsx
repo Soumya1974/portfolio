@@ -14,7 +14,7 @@ const INFO = {
 const NAV_LINKS = [
     { label: "Work", href: "#work" },
     { label: "About", href: "#about" },
-    { label: "Services", href: "#services" },
+    { label: "Techstack", href: "#services" },
     { label: "Contact", href: "#contact" },
 ];
 

@@ -17,15 +17,17 @@ const Dashboard = () => {
 
         <HeroSection />
 
-        <div className="relative z-10">
+        <div id='work'  className="relative z-10">
           <ProjectCard />
         </div>
 
-        <div className="relative z-20">
+        <div id='services' className="relative z-20">
           <TechStackPage />
         </div>
 
-        <About />
+        <div id='about'>
+          <About />
+        </div>
 
         <EducationTimeline />
 

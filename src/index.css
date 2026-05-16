@@ -7,6 +7,10 @@ body{
   background-color: #d1d5db;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @keyframes scroll {
