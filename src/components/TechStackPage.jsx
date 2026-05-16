@@ -276,17 +276,7 @@ const TechStackPage = () => {
                                         {timeline[stackId - 1].para}
 
                                     </motion.p>
-                                    {/*here */}
-                                    <motion.p
-                                        key={stackId}
-                                        initial={{ opacity: 0, y: -15 }}
-                                        whileInView={{ opacity: 1, y: 0 }}
-                                        transition={{ duration: 1.1 }}
-                                        className='text-sm xl:text-md'
-                                    >
-                                        {timeline[stackId - 1].para}
-
-                                    </motion.p>
+                                   
                                     <motion.div
                                         key={stackId}
                                         initial={{ rotateZ: 0 }}

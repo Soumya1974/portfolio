@@ -5,6 +5,7 @@ import TechStackPage from './TechStackPage'
 import About from './About'
 import EducationTimeline from './EducationTimeline'
 import Navbar from './Navbar'
+import Footer from './Footer'
 
 const Dashboard = () => {
   return (
@@ -27,6 +28,8 @@ const Dashboard = () => {
         <About />
 
         <EducationTimeline />
+
+        <Footer/>
 
       </div>
 
