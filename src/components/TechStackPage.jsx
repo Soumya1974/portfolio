@@ -184,7 +184,7 @@ const TechStackPage = () => {
                             initial={{ opacity: 0, y: -90 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8 }}
-                            className='w-full bg-gray-600 rounded-md p-4 relative h-72 md:h-90'
+                            className='w-full bg-gray-600 rounded-md p-4 relative h-60 md:h-90'
                         >
                             <div className='grid grid-cols-3 sm:grid-cols-3 gap-3 content-start z-10'>
                                 {fieldOptions.map(({ title, id, langlogo }) => (
@@ -328,7 +328,7 @@ const TechStackPage = () => {
                         initial={{ opacity: 0, y: 80 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
-                        className='w-full lg:w-1/2 bg-gray-500 rounded-md p-4 sm:p-5 sm:h-125 h-70 flex flex-col overflow-hidden'
+                        className='w-full lg:w-1/2 bg-gray-500 rounded-md p-4 sm:p-5 sm:h-125 h-70 flex flex-col overflow-hidden shadow-lg'
                     >
 
                         <div className='shrink-0'>
