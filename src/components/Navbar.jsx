@@ -4,7 +4,10 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
+
+
     <nav className='z-50 w-full bg-white border-b border-gray-100 shadow-sm'>
+
       <div className='flex justify-between items-center h-16 sm:h-20 px-5 sm:px-8 md:px-17'>
 
         <p className='font-semibold text-base sm:text-lg md:text-xl cursor-pointer tracking-tight'>
@@ -12,9 +15,15 @@ const Navbar = () => {
         </p>
 
         <ul className='hidden md:flex items-center gap-8 lg:gap-10 font-semibold list-none text-sm lg:text-base'>
-          <li className='cursor-pointer text-gray-500 hover:text-black transition-colors duration-300'>About</li>
-          <li className='cursor-pointer text-gray-500 hover:text-black transition-colors duration-300'>Works</li>
-          <li className='cursor-pointer text-gray-500 hover:text-black transition-colors duration-300'>Contact</li>
+          <li className='cursor-pointer text-gray-500 hover:text-black transition-colors duration-300'>
+            <a href="#about">About</a>
+          </li>
+          <li className='cursor-pointer text-gray-500 hover:text-black transition-colors duration-300'  >
+            <a href="#work">Works</a>
+          </li>
+          <li className='cursor-pointer text-gray-500 hover:text-black transition-colors duration-300'>
+            <a href="#footer">Contacts</a>
+          </li>
         </ul>
 
         <button
@@ -30,9 +39,15 @@ const Navbar = () => {
       </div>
 
       <ul className={`md:hidden w-full bg-white flex flex-col items-start font-semibold list-none overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-48 border-b border-gray-200' : 'max-h-0'}`}>
-        <li className='cursor-pointer text-gray-500 hover:text-black px-5 sm:px-8 py-3.5 w-full hover:bg-gray-50 transition-colors duration-200 text-sm sm:text-base' onClick={() => setIsOpen(false)}>About</li>
-        <li className='cursor-pointer text-gray-500 hover:text-black px-5 sm:px-8 py-3.5 w-full hover:bg-gray-50 transition-colors duration-200 text-sm sm:text-base' onClick={() => setIsOpen(false)}>Works</li>
-        <li className='cursor-pointer text-gray-500 hover:text-black px-5 sm:px-8 py-3.5 w-full hover:bg-gray-50 transition-colors duration-200 text-sm sm:text-base' onClick={() => setIsOpen(false)}>Contact</li>
+        <li className='cursor-pointer text-gray-500 hover:text-black px-5 sm:px-8 py-3.5 w-full hover:bg-gray-50 transition-colors duration-200 text-sm sm:text-base' onClick={() => setIsOpen(false)}>
+          <a href="#about">About</a>
+        </li>
+        <li className='cursor-pointer text-gray-500 hover:text-black px-5 sm:px-8 py-3.5 w-full hover:bg-gray-50 transition-colors duration-200 text-sm sm:text-base' onClick={() => setIsOpen(false)}>
+          <a href="#work">Works</a>
+        </li>
+        <li className='cursor-pointer text-gray-500 hover:text-black px-5 sm:px-8 py-3.5 w-full hover:bg-gray-50 transition-colors duration-200 text-sm sm:text-base' onClick={() => setIsOpen(false)}>
+          <a href="#footer">Contacts</a>
+        </li>
       </ul>
     </nav>
   )

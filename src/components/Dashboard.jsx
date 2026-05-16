@@ -6,6 +6,7 @@ import About from './About'
 import EducationTimeline from './EducationTimeline'
 import Navbar from './Navbar'
 import Footer from './Footer'
+import AboutModal from './AboutModal'
 
 const Dashboard = () => {
   return (
@@ -15,9 +16,10 @@ const Dashboard = () => {
 
       <div className="relative">
 
+        <AboutModal />
         <HeroSection />
 
-        <div id='work'  className="relative z-10">
+        <div id='work' className="relative z-10">
           <ProjectCard />
         </div>
 
@@ -31,7 +33,9 @@ const Dashboard = () => {
 
         <EducationTimeline />
 
-        <Footer/>
+        <div id="footer">
+          <Footer />
+        </div>
 
       </div>
 
