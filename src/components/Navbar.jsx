@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const Navbar = () => {
+const Navbar = ({ onConfirm }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -15,8 +15,10 @@ const Navbar = () => {
         </p>
 
         <ul className='hidden md:flex items-center gap-8 lg:gap-10 font-semibold list-none text-sm lg:text-base'>
-          <li className='cursor-pointer text-gray-500 hover:text-black transition-colors duration-300'>
-            <a href="#about">About</a>
+          <li className='cursor-pointer text-gray-500 hover:text-black transition-colors duration-300'
+            onClick={onConfirm}
+          >
+            About
           </li>
           <li className='cursor-pointer text-gray-500 hover:text-black transition-colors duration-300'  >
             <a href="#work">Works</a>
@@ -39,8 +41,13 @@ const Navbar = () => {
       </div>
 
       <ul className={`md:hidden w-full bg-white flex flex-col items-start font-semibold list-none overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-48 border-b border-gray-200' : 'max-h-0'}`}>
-        <li className='cursor-pointer text-gray-500 hover:text-black px-5 sm:px-8 py-3.5 w-full hover:bg-gray-50 transition-colors duration-200 text-sm sm:text-base' onClick={() => setIsOpen(false)}>
-          <a href="#about">About</a>
+        <li className='cursor-pointer text-gray-500 hover:text-black px-5 sm:px-8 py-3.5 w-full hover:bg-gray-50 transition-colors duration-200 text-sm sm:text-base'
+          onClick={() => {
+            setIsOpen(false);
+            onConfirm();
+          }}
+        >
+          About
         </li>
         <li className='cursor-pointer text-gray-500 hover:text-black px-5 sm:px-8 py-3.5 w-full hover:bg-gray-50 transition-colors duration-200 text-sm sm:text-base' onClick={() => setIsOpen(false)}>
           <a href="#work">Works</a>

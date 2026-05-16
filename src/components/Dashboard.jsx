@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import HeroSection from './HeroSection'
 import ProjectCard from './ProjectCard'
 import TechStackPage from './TechStackPage'
@@ -9,14 +9,21 @@ import Footer from './Footer'
 import AboutModal from './AboutModal'
 
 const Dashboard = () => {
+
+  const [isOpen, setOpen] = useState(false);
+
   return (
     <div className="relative">
 
-      <Navbar />
+      <Navbar onConfirm={() => setOpen(true)}/>
 
       <div className="relative">
 
-        <AboutModal />
+        {
+          isOpen && (
+            <AboutModal onCancel={() => setOpen(false)} isOpen={isOpen}/>
+          )
+        }
         <HeroSection />
 
         <div id='work' className="relative z-10">
