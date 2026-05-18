@@ -10,7 +10,7 @@ import { RiTailwindCssFill } from 'react-icons/ri'
 import { IoLogoJavascript } from 'react-icons/io'
 import { SiExpress, SiMongodb, SiRedux } from 'react-icons/si'
 
-const ProjectCard = () => {
+const ProjectCard = ({ onButtonClick }) => {
 
     const [hoveredId, setHoveredId] = useState(null);
 
@@ -118,6 +118,12 @@ const ProjectCard = () => {
         }
     ];
 
+    // const projectLinks = {
+    //     1: 
+    //     2: onClick={onButtonClick},
+
+    // }
+
     return (
         <div className="flex flex-col items-center relative bg-gray-300                                     px-0 md:px-5 z-20">
             {projectPreview.map((items) => {
@@ -217,7 +223,17 @@ const ProjectCard = () => {
                                             </span>
                                         </button>
 
-                                        <button className="preview-btn px-2 sm:px-5 py-2.5 bg-transparent hover:shadow-[0_0_20px_rgba(255,255,255,0.1)] w-full xs:w-auto">
+                                        <button className="preview-btn px-2 sm:px-5 py-2.5 bg-transparent hover:shadow-[0_0_20px_rgba(255,255,255,0.1)] w-full xs:w-auto"
+                                        
+                                            onClick={() => {
+                                                const actions = {
+                                                    1: () => window.open("https://cashflow-expensetracker.netlify.app/", "_blank"),
+                                                    2: () => onButtonClick(),
+                                                    3: () => onButtonClick(),
+                                                };
+                                                actions[id]?.();
+                                            }}
+                                        >
                                             <span className="flex items-center justify-center gap-2 text-sm sm:text-base">
                                                 <SquareArrowOutUpRight className="w-4 h-4 sm:w-5 sm:h-5" />
                                                 Preview

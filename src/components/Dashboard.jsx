@@ -7,15 +7,19 @@ import EducationTimeline from './EducationTimeline'
 import Navbar from './Navbar'
 import Footer from './Footer'
 import AboutModal from './AboutModal'
+import ProjectModal from './ProjectModal'
 
 const Dashboard = () => {
 
   const [isOpen, setOpen] = useState(false);
+  const [wipOpen, setWipOpen] = useState(false);
 
   return (
     <div className="relative">
 
-      <Navbar onConfirm={() => setOpen(true)}/>
+      <div id='hero'>
+        <Navbar onConfirm={() => setOpen(true)}/>
+      </div>
 
       <div className="relative">
 
@@ -27,7 +31,8 @@ const Dashboard = () => {
         <HeroSection />
 
         <div id='work' className="relative z-10">
-          <ProjectCard />
+          <ProjectCard onButtonClick={() => setWipOpen(true)} />
+          <ProjectModal isOpen={wipOpen} onClose={() => setWipOpen(false)} />
         </div>
 
         <div id='services' className="relative z-20">

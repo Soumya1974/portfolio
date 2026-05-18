@@ -11,7 +11,7 @@ const Navbar = ({ onConfirm }) => {
       <div className='flex justify-between items-center h-16 sm:h-20 px-5 sm:px-8 md:px-17'>
 
         <p className='font-semibold text-base sm:text-lg md:text-xl cursor-pointer tracking-tight'>
-          Soumya.dev
+          <a href="#hero">Soumya.dev</a>
         </p>
 
         <ul className='hidden md:flex items-center gap-8 lg:gap-10 font-semibold list-none text-sm lg:text-base'>
