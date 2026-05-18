@@ -17,7 +17,7 @@ export default function ProjectModal({ isOpen, onClose }) {
         <>
             {visible && (
                 <div
-                    className="fixed inset-0 bg-black/50 z-60"
+                    className="fixed inset-0 bg-black/50 z-50"
                     onClick={handleClose}
                 />
             )}

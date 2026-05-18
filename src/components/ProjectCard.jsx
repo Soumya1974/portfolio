@@ -125,7 +125,7 @@ const ProjectCard = ({ onButtonClick }) => {
     // }
 
     return (
-        <div className="flex flex-col items-center relative bg-gray-300                                     px-0 md:px-5 z-20">
+        <div className="flex flex-col items-center relative bg-gray-300 px-0 md:px-5 z-20">
             {projectPreview.map((items) => {
                 const { id, title, description, techstack, image, time } = items;
 
@@ -224,7 +224,7 @@ const ProjectCard = ({ onButtonClick }) => {
                                         </button>
 
                                         <button className="preview-btn px-2 sm:px-5 py-2.5 bg-transparent hover:shadow-[0_0_20px_rgba(255,255,255,0.1)] w-full xs:w-auto"
-                                        
+
                                             onClick={() => {
                                                 const actions = {
                                                     1: () => window.open("https://cashflow-expensetracker.netlify.app/", "_blank"),

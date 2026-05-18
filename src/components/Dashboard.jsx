@@ -31,8 +31,8 @@ const Dashboard = () => {
         <HeroSection />
 
         <div id='work' className="relative z-10">
-          <ProjectCard onButtonClick={() => setWipOpen(true)} />
           <ProjectModal isOpen={wipOpen} onClose={() => setWipOpen(false)} />
+          <ProjectCard onButtonClick={() => setWipOpen(true)} />
         </div>
 
         <div id='services' className="relative z-20">

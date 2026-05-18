@@ -158,7 +158,7 @@ const TechStackPage = () => {
     const active = fieldOptions.find(f => f.id === stackId);
 
     return (
-        <section className="sm:min-h-screen h-full relative w-full bg-white px-3 sm:px-6 lg:px-10 py-8 sm:py-10 flex items-center">
+        <section className="sm:min-h-screen h-full absolute w-full bg-white px-3 sm:px-6 lg:px-10 py-8 sm:py-10 flex items-center">
 
             <div className="w-full max-w-7xl mx-auto">
 
