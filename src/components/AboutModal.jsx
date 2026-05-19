@@ -158,13 +158,7 @@ export default function AboutModal({ onCancel, isOpen }) {
                                                 </span>
                                             ))}
                                         </div>
-                                        <div className="flex flex-wrap gap-1 mt-2">
-                                            {item.tags.map(t => (
-                                                <span key={t} className="text-xs border border-gray-200 rounded-full px-2 py-0.5 text-gray-400">
-                                                    {t}
-                                                </span>
-                                            ))}
-                                        </div>
+                                        
                                     </div>
                                 </div>
                             ))}
